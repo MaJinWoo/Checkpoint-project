@@ -1,0 +1,668 @@
+﻿{
+  "stores": [
+    {
+      "id": "2acae7dd-c56d-449c-8b31-dd60f89b1aa8",
+      "name": "1984",
+      "address": "서울특별시 마포구 동교로 194 혜원빌딩 1층",
+      "instagram": "@1984store",
+      "homepage": "https://www.re1984.com",
+      "hashtag": null
+    },
+    {
+      "id": "028e6556-226c-4d84-8c77-d1b34e60869e",
+      "name": "가가77페이지",
+      "address": "서울특별시 마포구 망원로 74-1 지하 1층",
+      "instagram": "@gaga77page",
+      "homepage": "https://linktr.ee/gaga77page/",
+      "hashtag": null
+    },
+    {
+      "id": "aa12eef6-19d8-44c4-9090-c75bea16015e",
+      "name": "가까운책방",
+      "address": "대전광역시 중구 대흥로 177 2층",
+      "instagram": "@nearbook",
+      "homepage": "",
+      "hashtag": null
+    },
+    {
+      "id": "7d9bb2ad-d555-4819-95eb-aa77fdf5025d",
+      "name": "각자의 삶",
+      "address": "서울특별시 종로구 창덕궁길 169 1층 ",
+      "instagram": "@life_bookstore",
+      "homepage": "",
+      "hashtag": null
+    },
+    {
+      "id": "a88f12b9-58a7-4900-bbcb-53ff24c8b041",
+      "name": "경험서재",
+      "address": "서울특별시 마포구 백범로 35 서강대학교 곤자가홀 1층",
+      "instagram": "@experiencelibrary",
+      "homepage": "https://linktr.ee/experiencelibrary",
+      "hashtag": null
+    },
+    {
+      "id": "48a3da4a-6733-4e6e-a529-d6b3a98887fe",
+      "name": "고래책방",
+      "address": "강원도 강릉시 율곡로 2848",
+      "instagram": "@gore_bookstore",
+      "homepage": "https://m.blog.naver.com/gore0001",
+      "hashtag": null
+    },
+    {
+      "id": "b3f6d1c2-2c24-4dbf-8307-83802e0e953d",
+      "name": "고요서사",
+      "address": "서울특별시 용산구 신흥로15길 18-4",
+      "instagram": "@goyo_bookshop",
+      "homepage": "https://linktr.ee/goyo_bookshop",
+      "hashtag": null
+    },
+    {
+      "id": "089eb30b-6107-4682-826f-50065cccf07a",
+      "name": "공간과 몰입",
+      "address": "서울특별시 종로구 낙산길 19 1층",
+      "instagram": "@gggmolip",
+      "homepage": "",
+      "hashtag": null
+    },
+    {
+      "id": "476aabf0-ecfd-453a-8d81-75f3c8c8796a",
+      "name": "공상온도",
+      "address": "서울특별시 마포구 동교로 23길40 지하1",
+      "instagram": "@gongsangondo",
+      "homepage": "http://gongsangondo.com/",
+      "hashtag": null
+    },
+    {
+      "id": "af53f358-3827-4027-bce7-f8bd9f3edd4b",
+      "name": "관객의취향",
+      "address": "서울특별시 관악구 관악로 204 3층 301호",
+      "instagram": "@your_taste_film",
+      "homepage": "https://yourtastefilm.co.kr",
+      "hashtag": null
+    },
+    {
+      "id": "c988bd22-6b3b-4e56-ad7d-996854027e10",
+      "name": "낫저스트북스",
+      "address": "서울특별시 성동구 성덕정9가길 14",
+      "instagram": "@notjust_books",
+      "homepage": "https://notjust-books.com/",
+      "hashtag": null
+    },
+    {
+      "id": "5feeed47-e545-427b-a66d-511f1a78b325",
+      "name": "노말에이",
+      "address": "서울특별시 중구 마른내로 12 4층",
+      "instagram": "@normala.kr",
+      "homepage": "https://normala.kr/",
+      "hashtag": null
+    },
+    {
+      "id": "39c495e8-ecb7-43e9-bef1-10e166fc7d34",
+      "name": "녹수서점",
+      "address": "울산광역시 중구 함월로 122 1층 녹수서점",
+      "instagram": "@noksu218",
+      "homepage": "",
+      "hashtag": null
+    },
+    {
+      "id": "d5738afc-8f0f-4b85-af1f-67598f251384",
+      "name": "누군가의 책방",
+      "address": "경상북도 경주시 서악2길 32-16",
+      "instagram": "@someonebookshop",
+      "homepage": "",
+      "hashtag": null
+    },
+    {
+      "id": "ec57544b-1bb7-413f-b9a4-06c8be37d42d",
+      "name": "다다르다",
+      "address": "대전광역시 중구 중교로73번길 6 1층, 2층",
+      "instagram": "@differeach",
+      "homepage": "https://blog.naver.com/daejeoncafe",
+      "hashtag": null
+    },
+    {
+      "id": "1a21f098-5165-4e1a-ba2f-b321a7c393fd",
+      "name": "다시서점",
+      "address": "서울특별시 강서구 공항대로8길 77-24 1층, 지층",
+      "instagram": "@dasibookshop",
+      "homepage": "https://www.dasibookshop.com/",
+      "hashtag": null
+    },
+    {
+      "id": "2c9e5cc8-da95-466d-ab23-f5ab19e93b93",
+      "name": "당인리책발전소",
+      "address": "서울특별시 마포구 월드컵로14길 10-8",
+      "instagram": "@danginbookplant",
+      "homepage": "",
+      "hashtag": null
+    },
+    {
+      "id": "2c89ef6b-1f80-4dc1-86a9-b0bccfd552fa",
+      "name": "더북소사이어티",
+      "address": "서울특별시 종로구 자하문로19길 25 지하1층",
+      "instagram": "@tbs_book_society",
+      "homepage": "https://linktr.ee/thebooksociety",
+      "hashtag": null
+    },
+    {
+      "id": "f2078a5e-1ebd-43d9-8015-753117cf569b",
+      "name": "더폴락",
+      "address": "대구광역시 중구 경상감영1길 62-5 1층",
+      "instagram": "@thepollack5",
+      "homepage": "https://linktr.ee/thepollack5",
+      "hashtag": null
+    },
+    {
+      "id": "37928372-f7ca-43d9-acc7-82e759c4aec3",
+      "name": "동네책방 숨",
+      "address": "광주광역시 광산구 수완로74번길 11-8 1층",
+      "instagram": "@book_sum",
+      "homepage": "https://blog.naver.com/bookcafesum",
+      "hashtag": null
+    },
+    {
+      "id": "aedf6f02-6f82-4e56-af0a-ad8bc3246c32",
+      "name": "땡스북스",
+      "address": "서울특별시 마포구 양화로6길 57-6",
+      "instagram": "@thanksbooks",
+      "homepage": "http://www.thanksbooks.com/",
+      "hashtag": null
+    },
+    {
+      "id": "fa8b07a9-9872-4209-9b69-d5447e36a6a6",
+      "name": "라바북스",
+      "address": "제주특별자치도 서귀포시 남원읍 태위로 87 1층",
+      "instagram": "@labas.book",
+      "homepage": "https://smartstore.naver.com/labasbooks",
+      "hashtag": null
+    },
+    {
+      "id": "527a5fd9-ce3c-4b12-a56c-a44300c8d885",
+      "name": "로우북스",
+      "address": "서울특별시 마포구 포은로 56 1층",
+      "instagram": "@low_books",
+      "homepage": "https://linktr.ee/lowbooks",
+      "hashtag": null
+    },
+    {
+      "id": "0c612437-9e7c-43cc-be4b-2b1c1ecd24c7",
+      "name": "만춘서점",
+      "address": "제주특별자치도 제주시 조천읍 함덕로 9",
+      "instagram": "@manchun.b.s",
+      "homepage": "",
+      "hashtag": null
+    },
+    {
+      "id": "961e75f4-5320-453b-99b7-d0d733a31cca",
+      "name": "무슨서점",
+      "address": "서울특별시 마포구 성미산로17길 105-4 2층 201호(오른쪽)",
+      "instagram": "@musn_books",
+      "homepage": "https://litt.ly/musnbooks",
+      "hashtag": null
+    },
+    {
+      "id": "88009a7f-5d1d-4972-9e31-87b68afdaf0f",
+      "name": "무아레서점",
+      "address": "서울특별시 동대문구 천호대로89길 9 2층",
+      "instagram": "@moire_books",
+      "homepage": "https://linktr.ee/moire_books",
+      "hashtag": null
+    },
+    {
+      "id": "001501a7-63a2-4a25-a282-332682edf824",
+      "name": "뭐든지 책방",
+      "address": "서울특별시 종로구 창신길 119 1층 ",
+      "instagram": "@mordeunji",
+      "homepage": "https://linktr.ee/mordeunji",
+      "hashtag": null
+    },
+    {
+      "id": "a6e31da1-f399-470a-8c1b-7243d2c1095b",
+      "name": "별책부록",
+      "address": "서울특별시 용산구 신흥로16길 7",
+      "instagram": "@byeolcheck",
+      "homepage": "https://byeolcheck.kr/",
+      "hashtag": null
+    },
+    {
+      "id": "3c333334-1566-4d81-a3e1-c2f20eb34196",
+      "name": "봄날의책방",
+      "address": "경상남도 통영시 봉수1길 6-1",
+      "instagram": "@bomnalbookshop",
+      "homepage": "http://bomnalbooks.com",
+      "hashtag": null
+    },
+    {
+      "id": "ae08205d-0e44-4b59-aae3-11036c224fca",
+      "name": "부비프",
+      "address": "서울특별시 성북구 보문로30가길 31 1층",
+      "instagram": "@buvif.bookshop",
+      "homepage": "https://linktr.ee/buvif.bookshop",
+      "hashtag": null
+    },
+    {
+      "id": "63a14610-d241-41e5-a4dc-d5bf0a4628ef",
+      "name": "북극서점",
+      "address": "인천광역시 부평구 장제로221번길 27 2층",
+      "instagram": "@bookgeuk",
+      "homepage": "https://linktr.ee/bookgeuk",
+      "hashtag": null
+    },
+    {
+      "id": "00ed0474-a53e-448d-bb1f-09ce3f26792e",
+      "name": "북바이북 광화문점",
+      "address": "서울특별시 종로구 새문안로5길 19 로얄빌딩 1층",
+      "instagram": "@book_by_book",
+      "homepage": "https://link.inpock.co.kr/bookbybook",
+      "hashtag": null
+    },
+    {
+      "id": "167a1514-de68-4f30-8bc9-c1627199749f",
+      "name": "북스토어 아베끄",
+      "address": "제주특별자치도 제주시 한림읍 금능9길 1-1 밖거리",
+      "instagram": "@bookstay_avec",
+      "homepage": "https://smartstore.naver.com/bookstoreavec",
+      "hashtag": null
+    },
+    {
+      "id": "323d9db7-8526-4566-baf0-a00e81da8c15",
+      "name": "북티크",
+      "address": "서울특별시 마포구 독막로31길 9 2층",
+      "instagram": "@booktique_bookshop",
+      "homepage": "https://www.booktique.kr/",
+      "hashtag": null
+    },
+    {
+      "id": "4a42f40e-7804-4794-b172-f9b59033879d",
+      "name": "브로콜리숲",
+      "address": "경기도 수원시 팔달구 화서문로32번길 21-10 2층",
+      "instagram": "@broccoli_soop",
+      "homepage": "",
+      "hashtag": null
+    },
+    {
+      "id": "ea47aa96-b0e2-466a-b250-175f70e21288",
+      "name": "비화림",
+      "address": "서울특별시 종로구 창덕궁길 153 1층 비화림서점",
+      "instagram": "@bihwarim_bookshop",
+      "homepage": "https://smartstore.naver.com/bihwarim_bookshop",
+      "hashtag": null
+    },
+    {
+      "id": "edd74509-88bb-4fb5-baaf-7bf59766376b",
+      "name": "사이책방7호점",
+      "address": "대구광역시 동구 용진길 177",
+      "instagram": "@saichekbang_7th_store",
+      "homepage": "https://blog.naver.com/NBlogTop.naver?isHttpsRedirect=true&blogId=sicheksaichekbang7th",
+      "hashtag": null
+    },
+    {
+      "id": "a07c3fb0-ae35-4c19-a614-ca589af4e9a1",
+      "name": "사적인서점",
+      "address": "서울특별시 마포구 성미산로1길 92 102호",
+      "instagram": "@sajeokinbookshop",
+      "homepage": "https://linktr.ee/sajeokinbookshop",
+      "hashtag": null
+    },
+    {
+      "id": "6e11b1a9-540c-4280-8356-e1a33ad019f2",
+      "name": "살롱드북",
+      "address": "서울특별시 관악구 남부순환로231길 11 태주빌라 1층",
+      "instagram": "@salon_book",
+      "homepage": "https://linktr.ee/salondebook",
+      "hashtag": null
+    },
+    {
+      "id": "e3e7adb1-f458-4555-9b3c-cd0c20c74bd9",
+      "name": "새고서림",
+      "address": "서울특별시 영등포구 영신로39길 8-1 201호",
+      "instagram": "@saego_seorim",
+      "homepage": "https://linktr.ee/saego_serim",
+      "hashtag": null
+    },
+    {
+      "id": "18c648da-8568-4087-9841-359ddd56fc9a",
+      "name": "서점 리스본",
+      "address": "서울특별시 마포구 성미산로23길 60 1~3층",
+      "instagram": "@bookshoplisbon",
+      "homepage": "https://www.bookshoplisbon.com/",
+      "hashtag": null
+    },
+    {
+      "id": "8a4fad64-9fe5-4f6f-b35c-b2618db1d913",
+      "name": "서점극장 라블레",
+      "address": "서울특별시 마포구 백범로25길 5 1층",
+      "instagram": "@rabelais.kr",
+      "homepage": "https://rabelais.kr/",
+      "hashtag": null
+    },
+    {
+      "id": "9fbbc180-3298-4876-ba2e-2674d9ddd83a",
+      "name": "서촌그책방",
+      "address": "서울특별시 종로구 자하문로5가길 30-1",
+      "instagram": "@seochonbooks",
+      "homepage": "",
+      "hashtag": null
+    },
+    {
+      "id": "d6083f38-c5ee-4e74-8af4-391516520ba7",
+      "name": "소수책방",
+      "address": "서울특별시 중구 다산로20길 26 2층",
+      "instagram": "@sosoobook",
+      "homepage": "",
+      "hashtag": null
+    },
+    {
+      "id": "41ea735c-992d-4b5c-a114-093458bd8ff7",
+      "name": "소심한책방",
+      "address": "제주특별자치도 제주시 구좌읍 종달동길 36-10",
+      "instagram": "@sosimbook",
+      "homepage": "https://linktr.ee/sosimbook",
+      "hashtag": null
+    },
+    {
+      "id": "3dcaeffa-d1fb-47b2-85ab-5bcebd9bb8aa",
+      "name": "스테레오북스",
+      "address": "부산광역시 동래구 온천천로453번길 14 2층",
+      "instagram": "@stereobooks",
+      "homepage": "https://smartstore.naver.com/stereobooks",
+      "hashtag": null
+    },
+    {
+      "id": "59174683-9813-4867-bc63-d34d2d20f3fb",
+      "name": "스토리지북앤필름",
+      "address": "서울특별시 용산구 신흥로 115-1 1층",
+      "instagram": "@storagebookandfilm",
+      "homepage": "http://www.storagebookandfilm.com",
+      "hashtag": null
+    },
+    {
+      "id": "cc12ad87-3056-4bf3-bfad-72ab63a6f245",
+      "name": "심다",
+      "address": "전라남도 순천시 역전2길 10 심다",
+      "instagram": "@simdabooks",
+      "homepage": "https://linktr.ee/simdabooks",
+      "hashtag": null
+    },
+    {
+      "id": "89c46061-d683-4098-a74f-81a59c643b7b",
+      "name": "어쩌다산책",
+      "address": "서울특별시 종로구 동숭길 101 지하 1층",
+      "instagram": "@ujd.promenade",
+      "homepage": "",
+      "hashtag": null
+    },
+    {
+      "id": "8df59acb-7df6-4bfb-b80f-bb459fbe5011",
+      "name": "여행책방사이에",
+      "address": "서울특별시 종로구 북촌로 125-6",
+      "instagram": "@spaceinblackstone ",
+      "homepage": "https://smartstore.naver.com/saiebook",
+      "hashtag": null
+    },
+    {
+      "id": "a4ae4cb1-6208-4612-a7f4-13d17cfda4f6",
+      "name": "연꽃빌라",
+      "address": "인천광역시 부평구 길주로547번길 8-12",
+      "instagram": "@lotusvilla.official",
+      "homepage": "",
+      "hashtag": null
+    },
+    {
+      "id": "2eabeb88-8197-4842-9fd4-98cbed0da272",
+      "name": "오브젝트",
+      "address": "서울특별시 마포구 와우산로35길 13",
+      "instagram": "@insideobject",
+      "homepage": "https://insideobject.com/",
+      "hashtag": null
+    },
+    {
+      "id": "1029cc52-7891-42d9-bfa3-729515f66d51",
+      "name": "오브젝트온라인",
+      "address": "서울특별시 서대문구 연희로 142 (연희동) 2층",
+      "instagram": "@insideobject",
+      "homepage": "https://insideobject.com/",
+      "hashtag": null
+    },
+    {
+      "id": "113d1564-b200-4bc0-97bc-fc3a72692616",
+      "name": "오평",
+      "address": "경기도 수원시 영통구 청명북로7번길 8-16",
+      "instagram": "@o_pyeong",
+      "homepage": "https://smartstore.naver.com/ohpyeong",
+      "hashtag": null
+    },
+    {
+      "id": "a6467937-023e-4205-a33e-7226f753bcd8",
+      "name": "오혜",
+      "address": "경기도 파주시 송학1길 173-1 1층 오혜",
+      "instagram": "@ohye.kr",
+      "homepage": "https://o-hye.com/",
+      "hashtag": null
+    },
+    {
+      "id": "4d0b59d4-b511-4abc-a57e-013090c18d18",
+      "name": "옥수서재",
+      "address": "서울특별시 성동구 한림말1길 16-1 B1층",
+      "instagram": "@oksubook",
+      "homepage": "",
+      "hashtag": null
+    },
+    {
+      "id": "8d682ca4-1ee3-447b-9cd6-a602554c85cf",
+      "name": "우분투북스",
+      "address": "대전광역시 유성구 어은로51번길 53",
+      "instagram": "@ubuntubooks",
+      "homepage": "",
+      "hashtag": null
+    },
+    {
+      "id": "b881dc7d-2106-4416-b8bc-bd6769a1953a",
+      "name": "유어마인드",
+      "address": "서울특별시 서대문구 연희로11라길 10-6 2층 우측",
+      "instagram": "@your_mind_com",
+      "homepage": "https://your-mind.com/",
+      "hashtag": null
+    },
+    {
+      "id": "3b0dc226-3b15-4343-8603-44806a029f4b",
+      "name": "윤슬서림",
+      "address": "강원도 강릉시 가작로287번길 7 101호",
+      "instagram": "@yoonseul_bookstore",
+      "homepage": "https://linktr.ee/yoonseul_bookstore?fbclid=PAAaZxEpxgS5GQcJR2vYwqv3uanl8DSLc7NxQiXI2agwNn70VBu0QYdTpFVmA",
+      "hashtag": null
+    },
+    {
+      "id": "88bedf67-a73a-4696-9902-93af90885a63",
+      "name": "이루라책방",
+      "address": "인천광역시 강화군 내가면 황청포구로333번길 27-1 ",
+      "instagram": "@leeroorabooks",
+      "homepage": "https://leeroora.modoo.at/",
+      "hashtag": null
+    },
+    {
+      "id": "3024842a-59b3-4c0d-b54e-d4bb849557e9",
+      "name": "자각몽",
+      "address": "서울특별시 종로구 창경궁로 297-2",
+      "instagram": "@artbooks_jgm",
+      "homepage": "",
+      "hashtag": null
+    },
+    {
+      "id": "335bba32-0d81-4477-ab7b-04f3cbb35d6d",
+      "name": "종이숲",
+      "address": "서울특별시 마포구 희우정로 93 1층 종이숲",
+      "instagram": "@_paperforest_",
+      "homepage": "",
+      "hashtag": null
+    },
+    {
+      "id": "bbab1a29-e184-42a7-bd0f-d3475064d27d",
+      "name": "주책공사",
+      "address": "부산광역시 중구 대청로141번길 15-1 1층",
+      "instagram": "@lordbook04",
+      "homepage": "https://linktr.ee/lordbook04",
+      "hashtag": null
+    },
+    {
+      "id": "d0f3de98-f085-4573-a337-2bed75e55507",
+      "name": "차방책방",
+      "address": "대구광역시 중구 경상감영길 60 1층 차방책방",
+      "instagram": "@coffeexchaeg",
+      "homepage": "https://www.facebook.com/coffeexchaeg",
+      "hashtag": null
+    },
+    {
+      "id": "ce71ca69-4043-4c4c-a8e9-8fd7dfc3ff84",
+      "name": "책가도",
+      "address": "서울특별시 도봉구 마들로11가길 6-25 월가타워 7층",
+      "instagram": "@chaekgado",
+      "homepage": "https://linktr.ee/chaekgado",
+      "hashtag": null
+    },
+    {
+      "id": "fdcbca4d-494d-4437-ab43-fb5c5c80fa7c",
+      "name": "책방 사춘기",
+      "address": "서울특별시 마포구 월드컵북로9길 30",
+      "instagram": "@sachungibook",
+      "homepage": "https://linktr.ee/sachungibook",
+      "hashtag": null
+    },
+    {
+      "id": "773283ab-ea51-4132-b94b-f40810c9f6ae",
+      "name": "책방 소리소문",
+      "address": "제주특별자치도 제주시 한경면 저지동길 8-31",
+      "instagram": "@sorisomoonbooks",
+      "homepage": "https://blog.naver.com/sorisomunbooks/221774003416",
+      "hashtag": null
+    },
+    {
+      "id": "95454dad-6c2e-43a0-8c0a-1ca761d944a1",
+      "name": "책방마실",
+      "address": "강원도 춘천시 옥천길 27 2층",
+      "instagram": "@masilbooks",
+      "homepage": "https://smartstore.naver.com/masilbooks",
+      "hashtag": null
+    },
+    {
+      "id": "dcb4fc98-9f2d-40eb-9124-e134aaaab48a",
+      "name": "책방무사",
+      "address": "제주특별자치도 서귀포시 성산읍 수시로10번길 3",
+      "instagram": "@musabooks",
+      "homepage": "https://www.storemusa.com/",
+      "hashtag": null
+    },
+    {
+      "id": "0738366e-244d-45b5-86d4-b081516492d2",
+      "name": "책방무사 서울점",
+      "address": "서울특별시 마포구 와우산로29길 20",
+      "instagram": "@musabooks",
+      "homepage": "https://www.storemusa.com/",
+      "hashtag": null
+    },
+    {
+      "id": "a3b3b9ae-77ed-48e9-a5f2-c78bf4958608",
+      "name": "책방밀물",
+      "address": "서울특별시 마포구 성미산로15길 37 1층",
+      "instagram": "@milmulbooks",
+      "homepage": "https://smartstore.naver.com/milmulbooks",
+      "hashtag": null
+    },
+    {
+      "id": "6a4bf1cf-4195-4506-9445-81979fdc3c01",
+      "name": "책방시나브로",
+      "address": "서울특별시 은평구 응암로25길 11-1 1층 책방시나브로",
+      "instagram": "@littlebylittlebook",
+      "homepage": "https://smartstore.naver.com/littlebylittlebooks",
+      "hashtag": null
+    },
+    {
+      "id": "4834f6f4-2615-4328-9788-8943109854d6",
+      "name": "책방연두",
+      "address": "경기도 군포시 송부로221번길 21 102호",
+      "instagram": "@chaegilneunbang",
+      "homepage": "https://m.blog.naver.com/chaegbangyeondu",
+      "hashtag": null
+    },
+    {
+      "id": "a1c8c34e-b7fc-4328-b8a7-4e01a2a3576a",
+      "name": "책방연희",
+      "address": "서울특별시 마포구 와우산로35길 3 B1F",
+      "instagram": "@chaegbangyeonhui",
+      "homepage": "https://www.yeonhui.com/",
+      "hashtag": null
+    },
+    {
+      "id": "64e2c954-3eb9-432a-a32c-bdc14efd4b5d",
+      "name": "책방연희",
+      "address": "서울특별시 마포구 와우산로35길 3 B1",
+      "instagram": "@chaegbangyeonhui",
+      "homepage": "https://www.yeonhui.com/",
+      "hashtag": null
+    },
+    {
+      "id": "23bc97e2-9c75-44ce-8bd0-d3689dc5bb4a",
+      "name": "책빵소",
+      "address": "강원도 원주시 금불4길 23 1층 102호",
+      "instagram": "@bookbbangso",
+      "homepage": "https://linktr.ee/bookbbangso",
+      "hashtag": null
+    },
+    {
+      "id": "dca43d75-2c86-4e0c-b2f9-8a8a9f382fc1",
+      "name": "책의기분",
+      "address": "서울특별시 성북구 돌곶이로9길 5-19 1층",
+      "instagram": "@booksmood_",
+      "homepage": "https://linktr.ee/booksmoods",
+      "hashtag": null
+    },
+    {
+      "id": "4fb626a0-e176-4a88-a46d-ef43e9d25bc3",
+      "name": "최인아책방",
+      "address": "서울특별시 강남구 선릉로 521",
+      "instagram": "@inabooks",
+      "homepage": "https://linktr.ee/inabooks",
+      "hashtag": null
+    },
+    {
+      "id": "7076e7de-4f74-41ba-a5c1-c3a230ab3049",
+      "name": "치우친 취향",
+      "address": "대구광역시 북구 구암로17길 24 1층",
+      "instagram": "@cucnbooks",
+      "homepage": "https://linktr.ee/cucnbooks",
+      "hashtag": null
+    },
+    {
+      "id": "fd73613c-9bad-4ef8-9fd3-3eb4c5e28580",
+      "name": "콜링북스",
+      "address": "서울특별시 강남구 선릉로157길 14-4 1층 103호",
+      "instagram": "@iam.callingbooks",
+      "homepage": "https://linktr.ee/callingbooks?fbclid=IwAR0XxcbhFPV0f19Sk8uFlGMwlPquYR1uBACjqx9FtwOevlWBAveis8TgVTc",
+      "hashtag": null
+    },
+    {
+      "id": "1e5f2138-83a4-4413-bb07-a4367151b377",
+      "name": "풀무질",
+      "address": "서울특별시 종로구 성균관로 19 지하",
+      "instagram": "@poolmoojil",
+      "homepage": "https://poolmoojil.com/",
+      "hashtag": null
+    },
+    {
+      "id": "9a3932a8-c8af-4d69-932e-084b6f389354",
+      "name": "한권의서점",
+      "address": "서울특별시 종로구 자하문로9길 24",
+      "instagram": "@of.onebook",
+      "homepage": "http://of-onebook.com",
+      "hashtag": null
+    },
+    {
+      "id": "52fced6a-8d57-411d-9594-6e663fcad334",
+      "name": "한낮의 바다",
+      "address": "강원도 강릉시 강릉대로159번안길 12 1층, 서점 한낮의 바다",
+      "instagram": "@midday_sea",
+      "homepage": "https://linktr.ee/vecks1",
+      "hashtag": null
+    }
+  ]
+}
