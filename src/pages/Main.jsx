@@ -2,23 +2,23 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import HomeBody from '../components/HomeBody';
 import HeaderImg from '../assets/nguyen-thu-hoai-9CILN1ybspA-unsplash.jpg';
-import NavBar from '../components/NavBar';
-
+import Layout from '../layouts/Layout';
 export default function Main() {
   const navigate = useNavigate();
   return (
-    <Container>
-      <NavBar />
-      <Header>
-        <img src={HeaderImg} alt="header-img" />
-        <HeaderContent>
-          <h1>All About Bookstores</h1>
-          <h3>책방을 소개합니다.</h3>
-          <button onClick={() => navigate('/detail')}>책방 지도 보러가기</button>
-        </HeaderContent>
-      </Header>
-      <HomeBody />
-    </Container>
+    <Layout>
+      <Container>
+        <Header>
+          <img src={HeaderImg} alt="header-img" />
+          <HeaderContent>
+            <h1>All About Bookstores</h1>
+            <h3>책방을 소개합니다.</h3>
+            <button onClick={() => navigate('/detail')}>책방 지도 보러가기</button>
+          </HeaderContent>
+        </Header>
+        <HomeBody />
+      </Container>
+    </Layout>
   );
 }
 
