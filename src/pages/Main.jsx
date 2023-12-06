@@ -2,7 +2,6 @@ import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import HomeBody from '../components/HomeBody';
 import HeaderImg from '../assets/nguyen-thu-hoai-9CILN1ybspA-unsplash.jpg';
-import NavBar from '../components/NavBar';
 import Layout from '../layouts/Layout';
 export default function Main() {
   const navigate = useNavigate();
