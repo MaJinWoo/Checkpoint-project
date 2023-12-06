@@ -3,6 +3,7 @@ import HomeBody from '../components/HomeBody';
 import HeaderImg from '../assets/nguyen-thu-hoai-9CILN1ybspA-unsplash.jpg';
 import { useRef } from 'react';
 import theme from '../styles/theme';
+import Layout from '../layouts/Layout'
 
 export default function Main() {
   const listRef = useRef(null);
@@ -12,7 +13,8 @@ export default function Main() {
   };
 
   return (
-    <Container>
+    <Layout>
+       <Container>
       <Header>
         <img src={HeaderImg} alt="header-img" />
         <HeaderContent>
@@ -23,6 +25,8 @@ export default function Main() {
       </Header>
       <HomeBody listRef={listRef} />
     </Container>
+    </Layout>
+   
   );
 }
 
