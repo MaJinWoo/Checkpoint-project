@@ -1,7 +1,6 @@
 import styled from 'styled-components';
 import HomeBody from '../components/HomeBody';
 import HeaderImg from '../assets/nguyen-thu-hoai-9CILN1ybspA-unsplash.jpg';
-import NavBar from '../components/NavBar';
 import { useRef } from 'react';
 import theme from '../styles/theme';
 
@@ -14,7 +13,6 @@ export default function Main() {
 
   return (
     <Container>
-      <NavBar />
       <Header>
         <img src={HeaderImg} alt="header-img" />
         <HeaderContent>

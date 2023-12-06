@@ -1,10 +1,8 @@
-import NavBar from '../components/NavBar';
 import styled from 'styled-components';
 
 export default function Detail() {
   return (
     <Container>
-      <NavBar />
       <HeaderImgContainer className="header-img-container">헤더 이미지 요기</HeaderImgContainer>
       <StoreInfoContainer>
         <h3>책방 이름</h3>
