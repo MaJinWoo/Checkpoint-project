@@ -1,11 +1,17 @@
-import { useNavigate } from 'react-router-dom';
 import styled from 'styled-components';
 import HomeBody from '../components/HomeBody';
 import HeaderImg from '../assets/nguyen-thu-hoai-9CILN1ybspA-unsplash.jpg';
 import NavBar from '../components/NavBar';
+import { useRef } from 'react';
+import theme from '../styles/theme';
 
 export default function Main() {
-  const navigate = useNavigate();
+  const listRef = useRef(null);
+
+  const onScrollToList = () => {
+    listRef.current?.scrollIntoView({ behavior: 'smooth' });
+  };
+
   return (
     <Container>
       <NavBar />
@@ -14,15 +20,18 @@ export default function Main() {
         <HeaderContent>
           <h1>All About Bookstores</h1>
           <h3>책방을 소개합니다.</h3>
-          <button onClick={() => navigate('/detail')}>책방 지도 보러가기</button>
+          <button onClick={onScrollToList}>책방 지도 보러가기</button>
         </HeaderContent>
       </Header>
-      <HomeBody />
+      <HomeBody listRef={listRef} />
     </Container>
   );
 }
 
-const Container = styled.div``;
+const Container = styled.div`
+  display: flex;
+  flex-direction: column;
+`;
 
 const Header = styled.div`
   display: flex;
@@ -56,17 +65,40 @@ const HeaderContent = styled.div`
     justify-content: center;
     text-align: center;
     font-size: 50px;
+    font-family: 'Cafe24-Regular';
+    font-weight: 400;
+    letter-spacing: 3px;
+
     width: 250px;
     padding: 20px;
     border-bottom: 2px solid white;
   }
 
   & h3 {
+    font-family: 'Cafe24-Regular';
+    font-weight: 200;
     font-size: 25px;
     padding: 20px;
   }
 
   & button {
+    width: 200px;
+    padding: 10px 30px;
+    border-radius: 20px;
+    border: 1px solid gray;
+
     margin-top: 20px;
+
+    color: ${theme.color.green};
+    font-family: 'Gowoon-Regular';
+    font-size: 16px;
+    background-color: ${theme.color.main};
+
+    &:hover {
+      cursor: pointer;
+      font-weight: 400;
+      color: ${theme.color.main};
+      background-color: ${theme.color.green};
+    }
   }
 `;
