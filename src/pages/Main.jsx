@@ -3,7 +3,7 @@ import HomeBody from '../components/HomeBody';
 import HeaderImg from '../assets/nguyen-thu-hoai-9CILN1ybspA-unsplash.jpg';
 import { useRef } from 'react';
 import theme from '../styles/theme';
-import Layout from '../layouts/Layout'
+import Layout from '../layouts/Layout';
 
 export default function Main() {
   const listRef = useRef(null);
@@ -14,19 +14,18 @@ export default function Main() {
 
   return (
     <Layout>
-       <Container>
-      <Header>
-        <img src={HeaderImg} alt="header-img" />
-        <HeaderContent>
-          <h1>All About Bookstores</h1>
-          <h3>책방을 소개합니다.</h3>
-          <button onClick={onScrollToList}>책방 지도 보러가기</button>
-        </HeaderContent>
-      </Header>
-      <HomeBody listRef={listRef} />
-    </Container>
+      <Container>
+        <Header>
+          <img src={HeaderImg} alt="header-img" />
+          <HeaderContent>
+            <h1>All About Bookstores</h1>
+            <h3>책방을 소개합니다.</h3>
+            <button onClick={onScrollToList}>책방 지도 보러가기</button>
+          </HeaderContent>
+        </Header>
+        <HomeBody listRef={listRef} />
+      </Container>
     </Layout>
-   
   );
 }
 
