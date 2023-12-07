@@ -4,23 +4,12 @@ import Background2 from '../assets/Background2.png';
 import axios from 'axios';
 import theme from '../styles/theme';
 import { useNavigate } from 'react-router-dom';
+import { fetchStores } from '../api/stores';
 
 function EditorsPick({ listRef }) {
   const [storeData, setStoreData] = useState([]);
 
   const navigate = useNavigate();
-
-  useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const response = await axios.get('http://localhost:4000/stores');
-        setStoreData(response.data);
-      } catch (error) {
-        console.error('Error fetching data:', error);
-      }
-    };
-    fetchData();
-  }, []);
 
   return (
     <Container ref={listRef}>
