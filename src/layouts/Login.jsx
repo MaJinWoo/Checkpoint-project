@@ -3,15 +3,20 @@ import { useState } from 'react';
 import { auth } from '../firebase';
 import Glogo from '../assets/g-logo.png';
 import styled from 'styled-components';
-export default function Login({ setIsMember, setModalOpen, setIsLogin }) {
+import { useDispatch } from 'react-redux';
+import { changeLoginStatus, changeMemberStatus } from '../redux/modules/authSlice';
+
+export default function Login({ setModalOpen }) {
   const [loginEmail, setLoginEmail] = useState('');
   const [loginPassword, setLoginPassword] = useState('');
+  const dispatch = useDispatch();
+
   const loginHandler = async () => {
     try {
       const userCredential = await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
       setLoginEmail('');
       setLoginPassword('');
-      setIsLogin(true);
+      dispatch(changeLoginStatus(true));
       setModalOpen(false);
     } catch (error) {
       const errorCode = error.code;
@@ -26,7 +31,7 @@ export default function Login({ setIsMember, setModalOpen, setIsLogin }) {
       const result = await signInWithPopup(auth, provider);
 
       setModalOpen(false);
-      setIsLogin(true);
+      dispatch(changeLoginStatus(true));
     } catch (error) {
       const errorCode = error.code;
       const errorMessage = error.message;
@@ -58,7 +63,7 @@ export default function Login({ setIsMember, setModalOpen, setIsLogin }) {
         <StyledButton
           type="button"
           onClick={() => {
-            setIsMember(false);
+            dispatch(changeMemberStatus(false));
           }}
         >
           회원가입

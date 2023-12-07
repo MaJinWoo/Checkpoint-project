@@ -1,9 +1,11 @@
 import styled from 'styled-components';
 import HomeBody from '../components/HomeBody';
+import Layout from '../layouts/Layout';
+
 import HeaderImg from '../assets/nguyen-thu-hoai-9CILN1ybspA-unsplash.jpg';
 import { useEffect, useRef } from 'react';
 import theme from '../styles/theme';
-import Layout from '../layouts/Layout';
+import Background1 from '../assets/Background1.png';
 
 export default function Main() {
   const listRef = useRef(null);
@@ -13,8 +15,8 @@ export default function Main() {
   };
 
   return (
-    <Layout>
-      <Container>
+    <Container>
+      <Layout>
         <Header>
           <img src={HeaderImg} alt="header-img" />
           <HeaderContent>
@@ -24,14 +26,17 @@ export default function Main() {
           </HeaderContent>
         </Header>
         <HomeBody listRef={listRef} />
-      </Container>
-    </Layout>
+      </Layout>
+    </Container>
   );
 }
 
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+
+  background-image: url(${Background1});
+  background-size: 100%;
 `;
 
 const Header = styled.div`
