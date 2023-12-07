@@ -1,21 +1,24 @@
-import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Background2 from '../assets/Background2.png';
-import axios from 'axios';
 import theme from '../styles/theme';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { fetchStores } from '../api/stores';
+import { useQuery } from '@tanstack/react-query';
 
 function EditorsPick({ listRef }) {
-  const [storeData, setStoreData] = useState([]);
-
   const navigate = useNavigate();
+
+  const { isLoading, isError, data: stores } = useQuery({ queryKey: ['stores'], queryFn: fetchStores });
+
+  if (isLoading) {
+    return <Container>Loading...</Container>;
+  }
 
   return (
     <Container ref={listRef}>
       <h3>Editor's Pick</h3>
       <CardContainer className="card-container">
-        {storeData.map((item) => {
+        {stores.map((item) => {
           return (
             <SingleCard className="single-card" key={item.id} onClick={() => navigate(`/detail/${item.id}`)}>
               <img alt="store" />

@@ -1,6 +1,8 @@
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
 import Router from './shared/Router';
 import { NavermapsProvider } from 'react-naver-maps';
+import { FaInstagramSquare } from 'react-icons/fa';
+
 const queryClient = new QueryClient({
   defaultOptions: { queries: { staleTime: 0, refetchOnWindowFocus: false } }
 });
