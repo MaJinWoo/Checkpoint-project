@@ -2,16 +2,21 @@ import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { useState } from 'react';
 import { auth } from '../firebase';
 import styled from 'styled-components';
-export default function Signup({ setIsMember }) {
+import { useSelector, useDispatch } from 'react-redux';
+import { changeMemberStatus } from '../redux/modules/authSlice';
+
+export default function Signup() {
   const [signupEmail, setSignupEmail] = useState('');
   const [signupPassword, setSignupPassword] = useState('');
   const [signupNickname, setSignupNickname] = useState('');
+  const dispatch = useDispatch();
+
   const signupHandler = async () => {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, signupEmail, signupPassword);
       await updateProfile(auth.currentUser, { displayName: signupNickname });
       alert('회원가입이 완료되었습니다! 로그인 해주세요.');
-      setIsMember(true);
+      dispatch(changeMemberStatus(true));
       setSignupEmail('');
       setSignupPassword('');
     } catch (error) {
@@ -43,7 +48,12 @@ export default function Signup({ setIsMember }) {
         <SignupInput placeholder="닉네임" value={signupNickname} onChange={(e) => setSignupNickname(e.target.value)} />
       </InputSection>
       <ButtonSection>
-        <StyledButton type="button" onClick={() => setIsMember(true)}>
+        <StyledButton
+          type="button"
+          onClick={() => {
+            dispatch(changeMemberStatus(true));
+          }}
+        >
           로그인
         </StyledButton>
         <StyledButton type="button" onClick={signupHandler}>

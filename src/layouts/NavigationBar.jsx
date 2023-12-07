@@ -2,13 +2,12 @@ import { useEffect, useState } from 'react';
 import { auth } from '../firebase';
 import { onAuthStateChanged } from 'firebase/auth';
 import LoginSignup from './LoginSignup';
+import { useDispatch } from 'react-redux';
+import { changeLoginStatus } from '../redux/modules/authSlice';
 export default function NavigationBar() {
-  // 로그인 상태를 담는 state
-  const [isLogin, setIsLogin] = useState(false);
-
   // 로딩 중 구현
   const [isLoading, setIsLoading] = useState(false);
-
+  const dispatch = useDispatch();
   useEffect(() => {
     setIsLoading(true);
     onAuthStateChanged(auth, (user) => {
@@ -17,15 +16,15 @@ export default function NavigationBar() {
           'login user',
           JSON.stringify({ email: user.email, displayName: user.displayName, uid: user.uid, photoURL: user.photoURL })
         );
-        setIsLogin(true);
+        dispatch(changeLoginStatus(true));
         setIsLoading(false);
       } else {
         localStorage.clear();
-        setIsLogin(false);
+        dispatch(changeLoginStatus(false));
         setIsLoading(false);
       }
     });
   }, []);
 
-  return <>{isLoading ? <div></div> : <LoginSignup isLogin={isLogin} setIsLogin={setIsLogin} />}</>;
+  return <>{isLoading ? <div></div> : <LoginSignup />}</>;
 }

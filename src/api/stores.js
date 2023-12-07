@@ -2,7 +2,7 @@ import axios from 'axios';
 
 export const fetchStores = async () => {
   try {
-    const response = await axios.get(`${process.env.REACT_APP_STORE_SERVER_URL}/stores`);
+    const response = await axios.get(`http://localhost:4000/stores`);
     console.log(response.data);
     return response.data;
   } catch (error) {
