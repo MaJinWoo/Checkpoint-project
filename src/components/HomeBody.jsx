@@ -4,7 +4,8 @@ import Background1 from '../assets/Background1.png';
 import Background3 from '../assets/Background3.png';
 import EditorsPick from './EditorsPick';
 import theme from '../styles/theme';
-
+import MapTest from './MapTest';
+import { Container as MapDiv } from 'react-naver-maps';
 function HomeBody({ listRef }) {
   return (
     <Container>
@@ -28,7 +29,16 @@ function HomeBody({ listRef }) {
       <EditorsPick listRef={listRef} />
       <NeighborStores>
         <h3>내 주변 책방</h3>
-        <MapContainer className="map"></MapContainer>
+        <MapContainer className="map">
+          <MapDiv
+            style={{
+              width: '100%',
+              height: '100%'
+            }}
+          >
+            <MapTest />
+          </MapDiv>
+        </MapContainer>
       </NeighborStores>
     </Container>
   );

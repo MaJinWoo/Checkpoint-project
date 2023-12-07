@@ -16,6 +16,8 @@ export default function MapTest() {
   const [myLocation, setMyLocation] = useState({ latitude: null, logitude: null });
   // 사용자 위치를 불러오면 지도 표시
   const [isMapLoading, setIsMapLoading] = useState(false);
+  // Marker State
+  const markerArray = [];
   // window.maps => navermaps 로 사용
   const navermaps = useNavermaps();
   // db.json api get 가져오기 => {data}
@@ -36,20 +38,18 @@ export default function MapTest() {
       const result = response.result;
       const items = result.items;
       const geocode = { lat: items[0].point.y, lng: items[0].point.x };
-      console.log('geocode', geocode);
     }
   );
 
-  const [marker1] = useState(
-    () =>
-      new navermaps.Marker({
-        position: { lat: 37.5666103, lng: 126.9783882 }
-      })
-  );
-  console.log('marker', marker1);
-  //   console.log(navermaps.Marker({ position: { lat: 37.5666103, lng: 126.9783882 } }));
+  // marker 정보 저장
+  // const [marker1] = useState(
+  //   () =>
+  //     new navermaps.Marker({
+  //       position: { lat: 37.5666103, lng: 126.9783882 }
+  //     })
+  // );
 
-  useListener(marker1, 'click', () => window.alert('서울시청 click'));
+  // useListener(marker1, 'click', () => window.alert('서울시청 click'));
 
   // 사용자 위치정보 불러오기
   useEffect(() => {
@@ -72,30 +72,22 @@ export default function MapTest() {
   if (isLoading) {
     return <div>데이터 로딩중...</div>;
   }
-  // console.log(data.geocode);
 
-  // {data.map((store)=>{
-  //   const marker = navermaps.Marker({
-  //       position: { lat: +store.geocode.lat, lng: +store.geocode.lng }
-  //     })
-  //   return <Overlay element = {marker}/>
-  // })}
-
+  for (let i = 0; i < data.length; i++) {
+    const marker = new navermaps.Marker({ position: { lat: +data[i].geocode.lat, lng: +data[i].geocode.lng } });
+    markerArray.push(marker);
+  }
   return (
     // default center => 사용자 위치로
     // marker 여러개 찍는방법? => Overlay element
-    // marker 배열로 저장 map 뿌려주기
     <>
       {isMapLoading ? (
         <div>지도 로딩중..</div>
       ) : (
         <NaverMap defaultCenter={new navermaps.LatLng(myLocation.latitude, myLocation.longitude)} defaultZoom={15}>
-          {/* {data.map((store) => {
-            const marker = navermaps.Marker({
-              position: { lat: +store.geocode.lat, lng: +store.geocode.lng }
-            });
-            return <Overlay element={marker} />;
-          })} */}
+          {markerArray.map((marker, index) => {
+            return <Overlay key={index} element={marker} />;
+          })}
 
           <Marker defaultPosition={new navermaps.LatLng(37.3595704, 127.105399)} />
         </NaverMap>
