@@ -53,9 +53,6 @@ const Container = styled.div`
   justify-content: center;
   row-gap: 30px;
   padding-top: 30px;
-
-  background-image: url(${Background1});
-  background-size: cover;
 `;
 
 const FristBody = styled.div`
