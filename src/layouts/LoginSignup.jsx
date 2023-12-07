@@ -4,19 +4,24 @@ import styled from 'styled-components';
 import Signup from './Signup';
 import { auth } from '../firebase';
 import { signOut } from 'firebase/auth';
+import { useSelector, useDispatch } from 'react-redux';
+import { changeLoginStatus, changeMemberStatus } from '../redux/modules/authSlice';
 
-export default function LoginSignup({ isLogin, setIsLogin }) {
-  const [isMember, setIsMember] = useState(true);
+export default function LoginSignup() {
   const [modalOpen, setModalOpen] = useState(false);
-
+  const authState = useSelector((state) => state.authSlice);
+  const dispatch = useDispatch();
+  console.log(authState.isLogin);
   const modalHandler = () => {
     setModalOpen(!modalOpen);
-    setIsMember(true);
+    dispatch(changeMemberStatus(true));
   };
 
   const logoutHandler = async () => {
     await signOut(auth);
     alert('로그아웃 되었습니다.');
+    dispatch(changeLoginStatus(false));
+    console.log(authState.isLogin);
   };
 
   return (
@@ -24,7 +29,7 @@ export default function LoginSignup({ isLogin, setIsLogin }) {
       <Logo>
         <img alt="logo" />
       </Logo>
-      {isLogin ? (
+      {authState.isLogin === true ? (
         <LoginContainer>
           <button onClick={logoutHandler}>로그아웃</button>
         </LoginContainer>
@@ -37,11 +42,7 @@ export default function LoginSignup({ isLogin, setIsLogin }) {
         <ModalWrapper>
           <ModalBody>
             <ModalCloseBtn onClick={modalHandler}>&times;</ModalCloseBtn>
-            {isMember ? (
-              <Login setIsMember={setIsMember} setModalOpen={setModalOpen} setIsLogin={setIsLogin} />
-            ) : (
-              <Signup setIsMember={setIsMember} setModalOpen={setModalOpen} setIsLogin={setIsLogin} />
-            )}
+            {authState.isMember ? <Login setModalOpen={setModalOpen} /> : <Signup setModalOpen={setModalOpen} />}
           </ModalBody>
         </ModalWrapper>
       ) : null}

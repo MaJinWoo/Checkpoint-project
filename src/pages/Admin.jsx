@@ -21,14 +21,6 @@ function Admin() {
       homepage,
       hashtag: null
     };
-
-    const queryClient = new QueryClient();
-
-    const mutation = useMutation(addTodo, {
-      onSuccess: () => {
-        queryClient.invalidateQueries('stores');
-      }
-    });
   };
 
   return (
