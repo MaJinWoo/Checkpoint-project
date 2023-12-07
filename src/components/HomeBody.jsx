@@ -4,7 +4,6 @@ import Background1 from '../assets/Background1.png';
 import Background3 from '../assets/Background3.png';
 import EditorsPick from './EditorsPick';
 import theme from '../styles/theme';
-import NaverMap from './NaverMap';
 
 function HomeBody({ listRef }) {
   return (
@@ -29,7 +28,7 @@ function HomeBody({ listRef }) {
       <EditorsPick listRef={listRef} />
       <NeighborStores>
         <h3>내 주변 책방</h3>
-        <MapContainer className="map">{/* <NaverMap /> */}</MapContainer>
+        <MapContainer className="map"></MapContainer>
       </NeighborStores>
     </Container>
   );
