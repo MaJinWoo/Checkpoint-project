@@ -26,20 +26,20 @@ export default function MapTest() {
   // 반환받은 경도, 위도를 갖고 marker 맵에 생성 => {data.mpa(()=>{return <Overlay.../>})}
 
   // Address To Geocode
-  navermaps.Service.geocode(
-    {
-      address: '강원도 강릉시 강릉대로159번안길 12 1층, 서점 한낮의 바다'
-    },
-    function async(status, response) {
-      if (status !== navermaps.Service.Status.OK) {
-        console.log('error');
-        return alert('Something wrong!');
-      }
-      const result = response.result;
-      const items = result.items;
-      const geocode = { lat: items[0].point.y, lng: items[0].point.x };
-    }
-  );
+  // navermaps.Service.geocode(
+  //   {
+  //     address: '강원도 강릉시 강릉대로159번안길 12 1층, 서점 한낮의 바다'
+  //   },
+  //   function async(status, response) {
+  //     if (status !== navermaps.Service.Status.OK) {
+  //       console.log('error');
+  //       return alert('Something wrong!');
+  //     }
+  //     const result = response.result;
+  //     const items = result.items;
+  //     const geocode = { lat: items[0].point.y, lng: items[0].point.x };
+  //   }
+  // );
 
   // marker 정보 저장
   // const [marker1] = useState(
@@ -75,8 +75,14 @@ export default function MapTest() {
 
   for (let i = 0; i < data.length; i++) {
     const marker = new navermaps.Marker({ position: { lat: +data[i].geocode.lat, lng: +data[i].geocode.lng } });
+    // useListener(marker, 'click', () => window.alert(`${data[i].address}`));
     markerArray.push(marker);
   }
+  // {
+  //   data.map((element) => {
+  //     for (let i = 0; i < data.length; i++) {}
+  //   });
+  // }
   return (
     // default center => 사용자 위치로
     // marker 여러개 찍는방법? => Overlay element
