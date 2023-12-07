@@ -2,6 +2,7 @@ import React from 'react';
 import useInput from '../hooks/useInput';
 import { v4 as uuidv4 } from 'uuid';
 import styled from 'styled-components';
+import { QueryClient, useMutation } from '@tanstack/react-query';
 
 function Admin() {
   const [name, onChangeNameHandler] = useInput();
@@ -20,6 +21,14 @@ function Admin() {
       homepage,
       hashtag: null
     };
+
+    const queryClient = new QueryClient();
+
+    const mutation = useMutation(addTodo, {
+      onSuccess: () => {
+        queryClient.invalidateQueries('stores');
+      }
+    });
   };
 
   return (
