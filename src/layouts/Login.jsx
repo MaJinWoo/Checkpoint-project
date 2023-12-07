@@ -3,6 +3,7 @@ import { useState } from 'react';
 import { auth } from '../firebase';
 import Glogo from '../assets/g-logo.png';
 import styled from 'styled-components';
+
 export default function Login({ setIsMember, setModalOpen, setIsLogin }) {
   const [loginEmail, setLoginEmail] = useState('');
   const [loginPassword, setLoginPassword] = useState('');

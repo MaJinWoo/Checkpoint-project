@@ -10,8 +10,8 @@ import {
   useMap,
   Marker
 } from 'react-naver-maps';
-import { addGeocode, getStores } from '../api/store';
-import axios from 'axios';
+import { fetchStores } from '../api/stores';
+
 export default function MapTest() {
   const [myLocation, setMyLocation] = useState({ latitude: null, logitude: null });
   // 사용자 위치를 불러오면 지도 표시
@@ -19,7 +19,7 @@ export default function MapTest() {
   // window.maps => navermaps 로 사용
   const navermaps = useNavermaps();
   // db.json api get 가져오기 => {data}
-  const { isLoading, isFetching, isError, data } = useQuery({ queryKey: ['stores'], queryFn: getStores });
+  const { isLoading, isFetching, isError, data } = useQuery({ queryKey: ['stores'], queryFn: fetchStores });
   // db.json 데이터를 순회하면서 {data.map}, address 정보를 입력받으면 위도, 경도로 반환해주는 함수
   // 반환받은 경도, 위도를 갖고 marker 맵에 생성 => {data.mpa(()=>{return <Overlay.../>})}
 
@@ -72,7 +72,7 @@ export default function MapTest() {
   if (isLoading) {
     return <div>데이터 로딩중...</div>;
   }
-  console.log(data.geocode);
+  // console.log(data.geocode);
 
   // {data.map((store)=>{
   //   const marker = navermaps.Marker({

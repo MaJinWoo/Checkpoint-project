@@ -1,9 +1,12 @@
 import styled from 'styled-components';
+import BookstoreImg from '../assets/BookstoreImg.jpg';
 
 export default function Detail() {
   return (
     <Container>
-      <HeaderImgContainer className="header-img-container">헤더 이미지 요기</HeaderImgContainer>
+      <HeaderImgContainer className="header-img-container">
+        <img src={BookstoreImg} />
+      </HeaderImgContainer>
       <StoreInfoContainer>
         <h3>책방 이름</h3>
         <InfoSpan>
@@ -63,6 +66,11 @@ const HeaderImgContainer = styled.div`
   width: 1100px;
   height: 400px;
   background-color: pink;
+
+  & img {
+    object-fit: cover;
+    width: 100%;
+  }
 `;
 
 const StoreInfoContainer = styled.div`
