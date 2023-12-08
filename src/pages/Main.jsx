@@ -34,9 +34,13 @@ export default function Main() {
 const Container = styled.div`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  justify-content: center;
 
   background-image: url(${Background1});
   background-size: 100%;
+  position: relative;
+  z-index: 1;
 `;
 
 const Header = styled.div`
@@ -53,8 +57,7 @@ const Header = styled.div`
   overflow: hidden;
 
   & img {
-    flex: 1 1 0;
-    align-self: stretch;
+    width: 100%;
     opacity: 0.75;
   }
 `;
@@ -88,7 +91,6 @@ const HeaderContent = styled.div`
   }
 
   & button {
-    width: 200px;
     padding: 10px 30px;
     border-radius: 20px;
     border: 1px solid gray;
