@@ -12,7 +12,7 @@ export const fetchStores = async () => {
 
 export const deleteStore = async (storeId) => {
   try {
-    await axios.delete(`http://localhost:4000/stores`, storeId);
+    await axios.delete(`${process.env.REACT_APP_STORE_SERVER_URL}/stores`, storeId);
     return;
   } catch (error) {
     return console.error('Error deleting data:', error);
@@ -21,8 +21,16 @@ export const deleteStore = async (storeId) => {
 
 export const addStore = async (newStore) => {
   try {
-    await axios.post(`http://localhost:4000/stores`, newStore);
+    await axios.post(`${process.env.REACT_APP_STORE_SERVER_URL}/stores`, newStore);
   } catch (error) {
     return console.error('Error posting store', error);
+  }
+};
+
+export const updateStore = async (payload) => {
+  try {
+    await axios.patch(`${process.env.REACT_APP_STORE_SERVER_URL}/stores`, payload);
+  } catch (error) {
+    return console.error('Error updating store', error);
   }
 };

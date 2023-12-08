@@ -7,6 +7,7 @@ import { auth } from '../firebase';
 import { signOut } from 'firebase/auth';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeLoginStatus, changeMemberStatus } from '../redux/modules/authSlice';
+import { Link } from 'react-router-dom';
 
 export default function LoginSignup() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -27,9 +28,9 @@ export default function LoginSignup() {
 
   return (
     <Container>
-      <Logo>
-        <img alt="logo" />
-      </Logo>
+      <div>
+        <StyledLink to={'/'}>Home</StyledLink>
+      </div>
       {authState.isLogin === true ? (
         <button onClick={logoutHandler}>로그아웃</button>
       ) : (
@@ -50,6 +51,7 @@ const Container = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  align-items: flex-start;
 
   width: 1100px;
   padding: 20px;
@@ -59,6 +61,7 @@ const Container = styled.div`
   z-index: 100;
 
   & button {
+    display: flex;
     padding: 5px 20px;
     border-radius: 20px;
     border: 1px solid gray;
@@ -77,11 +80,17 @@ const Container = styled.div`
   }
 `;
 
-const Logo = styled.div`
-  background-color: pink;
-`;
+const StyledLink = styled(Link)`
+  display: flex;
+  font-size: 14px;
+  font-family: 'Gowoon-Regular';
+  color: ${theme.color.main};
+  text-decoration: none;
 
-const LoginContainer = styled.div``;
+  padding: 10px 20px;
+  border: 1px solid ${theme.color.main};
+  border-radius: 70px;
+`;
 
 const ModalWrapper = styled.div`
   position: fixed;
