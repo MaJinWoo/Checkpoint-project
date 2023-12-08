@@ -45,7 +45,7 @@ const Container = styled.div`
 
   background-image: url(${Background2});
   background-size: contain;
-  border-radius: 20px;
+  border-radius: 10px;
 
   & h3 {
     font-size: 35px;

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Login from './Login';
 import styled from 'styled-components';
+import theme from '../styles/theme';
 import Signup from './Signup';
 import { auth } from '../firebase';
 import { signOut } from 'firebase/auth';
@@ -30,13 +31,9 @@ export default function LoginSignup() {
         <img alt="logo" />
       </Logo>
       {authState.isLogin === true ? (
-        <LoginContainer>
-          <button onClick={logoutHandler}>로그아웃</button>
-        </LoginContainer>
+        <button onClick={logoutHandler}>로그아웃</button>
       ) : (
-        <LoginContainer>
-          <button onClick={modalHandler}>로그인</button>
-        </LoginContainer>
+        <button onClick={modalHandler}>로그인</button>
       )}
       {modalOpen ? (
         <ModalWrapper>
@@ -55,18 +52,37 @@ const Container = styled.div`
   justify-content: space-between;
 
   width: 1100px;
-  margin: 0 auto;
+  padding: 20px;
 
-  background-color: lightblue;
+  position: absolute;
+  top: 0;
+  z-index: 100;
+
+  & button {
+    padding: 5px 20px;
+    border-radius: 20px;
+    border: 1px solid gray;
+
+    font-family: 'Gowoon-Regular';
+    font-size: 14px;
+    color: ${theme.color.main};
+    background-color: ${theme.color.green};
+
+    &:hover {
+      cursor: pointer;
+      font-weight: 400;
+      color: ${theme.color.green};
+      background-color: ${theme.color.main};
+    }
+  }
 `;
 
 const Logo = styled.div`
   background-color: pink;
 `;
 
-const LoginContainer = styled.div`
-  background-color: pink;
-`;
+const LoginContainer = styled.div``;
+
 const ModalWrapper = styled.div`
   position: fixed;
   z-index: 1;

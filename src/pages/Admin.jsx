@@ -1,16 +1,48 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import useInput from '../hooks/useInput';
 import { v4 as uuidv4 } from 'uuid';
 import styled from 'styled-components';
-import { QueryClient, useMutation } from '@tanstack/react-query';
+import { useMutation, useQuery, useQueryClient } from '@tanstack/react-query';
+import { useNavigate } from 'react-router-dom';
+import { addStore, fetchStores } from '../api/stores';
+import { useNavermaps } from 'react-naver-maps';
 
 function Admin() {
   const [name, onChangeNameHandler] = useInput();
   const [address, onChangeAddressHandler] = useInput();
   const [instagram, onChangeInstagramHandler] = useInput();
   const [homepage, onChangeHomepageHandler] = useInput();
+  const [geocode, setGeocode] = useState({ lat: null, lng: null });
 
-  const onAddStoreHandler = (e) => {
+  const navigate = useNavigate();
+  const navermaps = useNavermaps();
+  const queryClient = useQueryClient();
+
+  const mutation = useMutation({
+    mutationFn: addStore,
+    onSuccess: async () => {
+      await queryClient.invalidateQueries('stores');
+      navigate('/');
+    }
+  });
+
+  navermaps.Service.geocode(
+    {
+      address
+    },
+    function async(status, response) {
+      if (status !== navermaps.Service.Status.OK) {
+        console.log('error');
+        return alert('Something wrong!');
+      }
+      const result = response.result;
+      const items = result.items;
+      const foundGeocode = { lat: items[0].point.y, lng: items[0].point.x };
+      setGeocode(foundGeocode);
+    }
+  );
+
+  const onAddStoreHandler = async (e) => {
     e.preventDefault();
 
     const newStore = {
@@ -19,8 +51,10 @@ function Admin() {
       address,
       instagram,
       homepage,
-      hashtag: null
+      hashtag: null,
+      geocode
     };
+    mutation.mutateAsync(newStore);
   };
 
   return (

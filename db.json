@@ -995,6 +995,30 @@
         "lat": "37.7577153",
         "lng": "128.8891178"
       }
+    },
+    {
+      "id": "389d4fc0-6b46-4c8d-a683-2056094d21bd",
+      "name": "테스트",
+      "address": "서울시 테스트",
+      "instagram": "testinstagram",
+      "homepage": "homepage.com",
+      "hashtag": null,
+      "geocode": {
+        "lat": "37.7577153",
+        "lng": "128.8891178"
+      }
+    },
+    {
+      "id": "34c08d3d-6be5-4dcd-a3bf-59248aa09bb4",
+      "name": "테스트 책방",
+      "address": "서울시 테스트",
+      "instagram": "testinsta",
+      "homepage": "testhomepage.com",
+      "hashtag": null,
+      "geocode": {
+        "lat": "37.7577153",
+        "lng": "128.8891178"
+      }
     }
   ]
 }

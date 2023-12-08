@@ -67,7 +67,7 @@ const FristBody = styled.div`
   background-image: url(${Background1});
   background-size: 90%;
   background-position: center;
-  border-radius: 20px;
+  border-radius: 10px;
 
   padding: 30px 50px;
 `;
@@ -131,11 +131,10 @@ const NeighborStores = styled.div`
 
   background-image: url(${Background3});
   background-size: cover;
+  border-radius: 10px;
 
   width: 1100px;
   padding: 30px 50px;
-
-  background-color: lightblue;
 
   & h3 {
     font-size: 25px;
