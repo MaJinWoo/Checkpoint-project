@@ -26,7 +26,7 @@ function HomeBody({ listRef }) {
           <button>자세히 보기</button>
         </RightContainer>
       </FristBody>
-      <EditorsPick listRef={listRef} />
+      <EditorsPick />
       <NeighborStores>
         <h3>내 주변 책방</h3>
         <MapContainer className="map">
@@ -36,7 +36,7 @@ function HomeBody({ listRef }) {
               height: '100%'
             }}
           >
-            <MapTest />
+            <MapTest listRef={listRef} />
           </MapDiv>
         </MapContainer>
       </NeighborStores>
