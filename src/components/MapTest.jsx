@@ -1,5 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
 import { useEffect, useState } from 'react';
+import styled from 'styled-components';
 import {
   Container as MapDiv,
   NaverMap,
@@ -8,12 +9,13 @@ import {
   useListener,
   Listener,
   useMap,
+  InfoWindow,
   Marker
 } from 'react-naver-maps';
 import { fetchStores } from '../api/stores';
 
-export default function MapTest() {
-  const [myLocation, setMyLocation] = useState({ latitude: null, logitude: null });
+export default function MapTest({ listRef }) {
+  const [myLocation, setMyLocation] = useState({ latitude: null, longitude: null });
   // 사용자 위치를 불러오면 지도 표시
   const [isMapLoading, setIsMapLoading] = useState(false);
   // Marker State
@@ -77,21 +79,59 @@ export default function MapTest() {
     const marker = new navermaps.Marker({ position: { lat: +data[i].geocode.lat, lng: +data[i].geocode.lng } });
     markerArray.push(marker);
   }
+  // const window = new navermaps.InfoWindow();
+
   return (
     // default center => 사용자 위치로
     // marker 여러개 찍는방법? => Overlay element
-    <>
+    <div ref={listRef}>
       {isMapLoading ? (
         <div>지도 로딩중..</div>
       ) : (
         <NaverMap defaultCenter={new navermaps.LatLng(myLocation.latitude, myLocation.longitude)} defaultZoom={15}>
           {markerArray.map((marker, index) => {
-            return <Overlay key={index} element={marker} />;
+            return (
+              <Overlay key={index} element={marker}>
+                <Listener
+                  type="click"
+                  listener={() => {
+                    // console.log(`${data[index].address}`);
+                    // InfoWindow.open();
+                  }}
+                />
+              </Overlay>
+            );
           })}
 
           <Marker defaultPosition={new navermaps.LatLng(37.3595704, 127.105399)} />
         </NaverMap>
       )}
-    </>
+    </div>
   );
 }
+
+const ModalWrapper = styled.div`
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+`;
+
+const ModalBody = styled.div`
+  width: 400px;
+  height: 500px;
+  padding: 30px 30px;
+  margin: 0 auto;
+  border: 1px solid #777;
+  border-radius: 20px;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+`;

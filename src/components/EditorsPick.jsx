@@ -5,7 +5,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { fetchStores } from '../api/stores';
 import { useQuery } from '@tanstack/react-query';
 
-function EditorsPick({ listRef }) {
+function EditorsPick() {
   const navigate = useNavigate();
 
   const { isLoading, isError, data: stores } = useQuery({ queryKey: ['stores'], queryFn: fetchStores });
@@ -15,7 +15,7 @@ function EditorsPick({ listRef }) {
   }
 
   return (
-    <Container ref={listRef}>
+    <Container>
       <h3>Editor's Pick</h3>
       <CardContainer className="card-container">
         {stores.map((item) => {
