@@ -6,12 +6,14 @@ import { useQuery } from '@tanstack/react-query';
 import { fetchStores } from '../api/stores';
 
 import Background1 from '../assets/Background1.png';
-import Background2 from '../assets/Background2.png';
 import { FaInstagramSquare } from 'react-icons/fa';
 import { FaGlobe } from 'react-icons/fa';
 import { FaCoffee } from 'react-icons/fa';
 import { IoMdWine } from 'react-icons/io';
 import { FaChair } from 'react-icons/fa';
+
+import CommentBox from '../components/CommentBox';
+import EachStoreMap from '../components/EachStoreMap';
 
 export default function Detail() {
   const params = useParams();
@@ -68,20 +70,13 @@ export default function Detail() {
             </a>
           </LinkContainer>
         </StoreInfoContainer>
-        <CommentsContainer>
-          <label>방문 후기</label>
-          <div>방문 후기 1</div>
-          <div>방문 후기 2</div>
-          <CommentInputContainer>
-            <label>방문 후기 남기기</label>
-            <div>
-              <textarea />
-              <button>확인</button>
-            </div>
-          </CommentInputContainer>
-        </CommentsContainer>
-        <MapContainer className="map-container">지도 요기</MapContainer>
-      </Layout>{' '}
+        <CommentBox />
+        <EachStoreMap />
+        <CRUDContainer>
+          <button>수정하기</button>
+          <button>삭제하기</button>
+        </CRUDContainer>
+      </Layout>
     </Container>
   );
 }
@@ -94,6 +89,8 @@ const Container = styled.div`
 
   background-image: url(${Background1});
   background-size: 100%;
+
+  position: relative;
 `;
 
 const HeaderImgContainer = styled.div`
@@ -101,7 +98,6 @@ const HeaderImgContainer = styled.div`
   align-items: center;
   justify-content: center;
 
-  width: 1100px;
   height: 400px;
   overflow: hidden;
   border-radius: 10px;
@@ -119,7 +115,6 @@ const StoreInfoContainer = styled.div`
 
   width: 1100px;
   padding: 30px 50px;
-  margin: 20px 0;
 
   font-family: 'Gowoon-Regular';
 
@@ -166,41 +161,6 @@ const LinkContainer = styled.div`
   }
 `;
 
-const CommentsContainer = styled.div`
+const CRUDContainer = styled.div`
   display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-  width: 1100px;
-  padding: 30px 50px;
-  margin: 20px 0;
-
-  background-image: url(${Background2});
-  background-size: 100%;
-  border-radius: 10px;
-`;
-
-const CommentInputContainer = styled.div`
-  display: flex;
-  flex-direction: column;
-  row-gap: 10px;
-
-  border: 1px solid black;
-
-  & div {
-    display: flex;
-    column-gap: 10px;
-    & textarea {
-      flex: 1;
-    }
-  }
-`;
-
-const MapContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 1100px;
-  height: 500px;
-  background-color: lightblue;
 `;
