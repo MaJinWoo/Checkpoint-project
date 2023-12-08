@@ -1,15 +1,13 @@
 import React, { useEffect, useState } from 'react';
-import useInput from '../hooks/useInput';
 import { v4 as uuidv4 } from 'uuid';
 import styled from 'styled-components';
-import { useMutation, useQueryClient, useQuery } from '@tanstack/react-query';
+import { useMutation, useQueryClient } from '@tanstack/react-query';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { addStore, updateStore, fetchStores } from '../api/stores';
+import { addStore, updateStore } from '../api/stores';
 import { useNavermaps } from 'react-naver-maps';
 import { storage } from '../firebase';
 import { uploadBytes, ref } from 'firebase/storage';
 import Checkbox from '../components/Checkbox';
-import axios from 'axios';
 import UpdateStore from '../components/Admin/UpdateStore';
 
 function Admin() {

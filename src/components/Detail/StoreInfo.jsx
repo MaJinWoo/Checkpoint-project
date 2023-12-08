@@ -57,11 +57,11 @@ const StoreInfoContainer = styled.div`
 
   width: 1100px;
   padding: 30px 50px;
+  margin-top: 20px;
 
   font-family: 'Gowoon-Regular';
 
-  background-image: url(${Background1});
-  background-size: 70%;
+  background-color: transparent;
   border-radius: 10px;
 
   & h3 {
