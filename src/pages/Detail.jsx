@@ -15,6 +15,10 @@ import { FaChair } from 'react-icons/fa';
 import CommentBox from '../components/CommentBox';
 import EachStoreMap from '../components/EachStoreMap';
 import { Container as MapDiv } from 'react-naver-maps';
+import StoreCRUD from '../components/StoreCRUD';
+import { getDownloadURL, ref, listAll } from 'firebase/storage';
+import { storage } from '../firebase';
+
 export default function Detail() {
   const params = useParams();
 
@@ -25,8 +29,22 @@ export default function Detail() {
   }
 
   const filteredStore = stores.find((item) => item.id === params.id);
-  console.log('filteredStore-->', filteredStore);
-  console.log('instagram address-->', filteredStore.instagram.replace('@', ''));
+
+  const downloadURL = async () => {
+    try {
+      const listRef = ref(storage, filteredStore.id);
+      const res = await listAll(listRef);
+      if (res.items.length > 0) {
+        const firstFileRef = res.items[0];
+        const url = await getDownloadURL(firstFileRef);
+        console.log(url);
+      } else {
+        console.log('No files found in the directory');
+      }
+    } catch (error) {
+      console.error('Error getting files: ', error);
+    }
+  };
 
   return (
     <Container>
@@ -81,11 +99,7 @@ export default function Detail() {
             <EachStoreMap latlng={filteredStore.geocode} />
           </MapDiv>
         </MapContainer>
-
-        <CRUDContainer>
-          <button>수정하기</button>
-          <button>삭제하기</button>
-        </CRUDContainer>
+        <StoreCRUD filteredStore={filteredStore} />
       </Layout>
     </Container>
   );

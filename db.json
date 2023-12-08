@@ -997,27 +997,51 @@
       }
     },
     {
-      "id": "389d4fc0-6b46-4c8d-a683-2056094d21bd",
-      "name": "테스트",
-      "address": "서울시 테스트",
-      "instagram": "testinstagram",
-      "homepage": "homepage.com",
+      "id": "ef8599e7-8ae3-4e3d-92ff-9fb2ac1cff52",
+      "name": "테스트 혜민 책방",
+      "address": "서울시 용산구 원효로 216 용산e편한세상 113동",
+      "instagram": "@page_hyeomin",
+      "homepage": "hyeomin.com",
       "hashtag": null,
       "geocode": {
-        "lat": "37.7577153",
-        "lng": "128.8891178"
+        "lat": null,
+        "lng": null
       }
     },
     {
-      "id": "34c08d3d-6be5-4dcd-a3bf-59248aa09bb4",
-      "name": "테스트 책방",
-      "address": "서울시 테스트",
-      "instagram": "testinsta",
-      "homepage": "testhomepage.com",
+      "id": "e308ed75-900c-446d-bd62-e1b4349f66fe",
+      "name": "테스트 책방 이미지",
+      "address": "서울시 용산구 원효로 216 용산e편한세상",
+      "instagram": "@page_hyeomin",
+      "homepage": "hyeomin.com",
       "hashtag": null,
       "geocode": {
-        "lat": "37.7577153",
-        "lng": "128.8891178"
+        "lat": null,
+        "lng": null
+      }
+    },
+    {
+      "id": "992b14d0-e396-4c99-9822-f5048129a5a9",
+      "name": "테스트책방 타일",
+      "address": "서울시 용산구 원효로 216 용산e편한세상",
+      "instagram": "@hyeomin",
+      "homepage": "hyeomin.com",
+      "hashtag": null,
+      "geocode": {
+        "lat": null,
+        "lng": null
+      }
+    },
+    {
+      "id": "66c77c62-8e4c-4398-8b35-ca0cc9d366d0",
+      "name": "테스트 빵빵빵",
+      "address": "서울시 용산구 원효로 216 용산e편한세상 113동",
+      "instagram": "@hyeomin",
+      "homepage": "hyeomin.com",
+      "hashtag": null,
+      "geocode": {
+        "lat": "37.5362392",
+        "lng": "126.9664929"
       }
     }
   ]
