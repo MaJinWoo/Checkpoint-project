@@ -6,7 +6,7 @@ function EachStoreMap({ latlng }) {
 
   return (
     <>
-      <NaverMap defaultCenter={new navermaps.LatLng(lat, lng)} defaultZoom={15}>
+      <NaverMap defaultCenter={new navermaps.LatLng(lat, lng)} defaultZoom={17}>
         <Marker defaultPosition={new navermaps.LatLng(lat, lng)} />
       </NaverMap>
     </>
