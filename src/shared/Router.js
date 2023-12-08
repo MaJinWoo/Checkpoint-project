@@ -4,6 +4,7 @@ import Detail from '../pages/Detail';
 import Admin from '../pages/Admin';
 // import Feed from '../pages/feed';
 import TestPage from '../pages/TestPage';
+import SwiperComponent from '../pages/Swiper';
 
 export default function Router() {
   return (
@@ -14,6 +15,7 @@ export default function Router() {
         <Route path="/admin" element={<Admin />} />
         {/* <Route path="/feed/:id" element={<Feed />} /> */}
         <Route path="/testpage" element={<TestPage />} />
+        <Route path="/swiper" element={<SwiperComponent />} />
       </Routes>
     </BrowserRouter>
   );

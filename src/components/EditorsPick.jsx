@@ -4,7 +4,17 @@ import theme from '../styles/theme';
 import { useNavigate, useParams } from 'react-router-dom';
 import { fetchStores } from '../api/stores';
 import { useQuery } from '@tanstack/react-query';
-
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+const range = (length) => {
+  return [...Array(length)].map((_, i) => {
+    return i;
+  });
+};
 function EditorsPick() {
   const navigate = useNavigate();
 
@@ -13,12 +23,14 @@ function EditorsPick() {
   if (isLoading) {
     return <Container>Loading...</Container>;
   }
+  const swiperEndNumber = Math.ceil(stores.length / 9);
 
   return (
     <Container>
       <h3>Editor's Pick</h3>
-      <CardContainer className="card-container">
-        {stores.map((item) => {
+
+      {/* <CardContainer className="card-container">
+        {stores.slice(0, 9).map((item) => {
           return (
             <SingleCard className="single-card" key={item.id} onClick={() => navigate(`/detail/${item.id}`)}>
               <img alt="store" />
@@ -29,7 +41,38 @@ function EditorsPick() {
             </SingleCard>
           );
         })}
-      </CardContainer>
+      </CardContainer> */}
+      <StyledSwiper
+        // install Swiper modules
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        spaceBetween={50}
+        slidesPerView={1}
+        navigation
+        pagination={{ clickable: true }}
+        scrollbar={{ draggable: true }}
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log('slide change')}
+      >
+        {range(swiperEndNumber).map((page) => {
+          return (
+            <StyledSwiperSlide key={page}>
+              <CardContainer>
+                {stores.slice(page * 9, (page + 1) * 9).map((item) => {
+                  return (
+                    <SingleCard className="single-card" key={item.id} onClick={() => navigate(`/detail/${item.id}`)}>
+                      <img alt="store" />
+                      <TextContainer>
+                        <h5>{item.name}</h5>
+                        <p>{item.address}</p>
+                      </TextContainer>
+                    </SingleCard>
+                  );
+                })}
+              </CardContainer>
+            </StyledSwiperSlide>
+          );
+        })}
+      </StyledSwiper>
     </Container>
   );
 }
@@ -97,4 +140,15 @@ const TextContainer = styled.div`
     padding-right: 30px;
     color: gray;
   }
+`;
+
+const StyledSwiper = styled(Swiper)`
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding: 0 40px 40px 40px;
+`;
+const StyledSwiperSlide = styled(SwiperSlide)`
+  width: 1100px;
+  height: 100%;
 `;
