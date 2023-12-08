@@ -47,7 +47,7 @@
       },
       "checklist": {
         "alcohol": false,
-        "coffee": false,
+        "coffee": true,
         "seats": false
       }
     },

@@ -85,10 +85,7 @@ const FristBody = styled.div`
 
   height: 500px;
   width: 1100px;
-
-  background-image: url(${Background1});
-  background-size: 90%;
-  background-position: center;
+  background-color: transparent;
   border-radius: 10px;
 
   padding: 30px 50px;
