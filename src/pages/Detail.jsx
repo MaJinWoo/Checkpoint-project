@@ -14,6 +14,7 @@ import { FaChair } from 'react-icons/fa';
 
 import CommentBox from '../components/CommentBox';
 import EachStoreMap from '../components/EachStoreMap';
+import { Container as MapDiv } from 'react-naver-maps';
 import StoreCRUD from '../components/StoreCRUD';
 import { getDownloadURL, ref, listAll } from 'firebase/storage';
 import { storage } from '../firebase';
@@ -88,7 +89,16 @@ export default function Detail() {
           </LinkContainer>
         </StoreInfoContainer>
         <CommentBox />
-        <EachStoreMap />
+        <MapContainer className="map-container">
+          <MapDiv
+            style={{
+              width: '100%',
+              height: '100%'
+            }}
+          >
+            <EachStoreMap latlng={filteredStore.geocode} />
+          </MapDiv>
+        </MapContainer>
         <StoreCRUD filteredStore={filteredStore} />
       </Layout>
     </Container>
@@ -173,4 +183,19 @@ const LinkContainer = styled.div`
     color: black;
     padding: 5px;
   }
+`;
+
+const CRUDContainer = styled.div`
+  display: flex;
+`;
+
+const MapContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1100px;
+  height: 500px;
+  background-color: lightblue;
+  border-radius: 10px;
 `;

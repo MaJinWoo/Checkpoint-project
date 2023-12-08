@@ -1,11 +1,11 @@
 import authSlice from '../modules/authSlice';
-import storeFormSlice from '../modules/storeFormSlice';
+import mapSlice from '../modules/mapSlice';
 import { configureStore } from '@reduxjs/toolkit';
 
 const store = configureStore({
   reducer: {
     authSlice,
-    storeFormSlice
+    mapSlice
   }
 });
 export default store;
