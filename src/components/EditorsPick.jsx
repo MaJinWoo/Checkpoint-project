@@ -28,20 +28,6 @@ function EditorsPick() {
   return (
     <Container>
       <h3>Editor's Pick</h3>
-
-      {/* <CardContainer className="card-container">
-        {stores.slice(0, 9).map((item) => {
-          return (
-            <SingleCard className="single-card" key={item.id} onClick={() => navigate(`/detail/${item.id}`)}>
-              <img alt="store" />
-              <TextContainer>
-                <h5>{item.name}</h5>
-                <p>{item.address}</p>
-              </TextContainer>
-            </SingleCard>
-          );
-        })}
-      </CardContainer> */}
       <StyledSwiper
         // install Swiper modules
         modules={[Navigation, Pagination, Scrollbar, A11y]}
