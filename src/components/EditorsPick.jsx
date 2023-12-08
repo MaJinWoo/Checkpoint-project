@@ -10,20 +10,67 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import { listAll, ref, getStorage, getDownloadURL } from 'firebase/storage';
+import { storage } from '../firebase';
+import { useEffect, useState } from 'react';
+import BookstoreImg from '../assets/BookstoreImg.jpg';
+
 const range = (length) => {
   return [...Array(length)].map((_, i) => {
     return i;
   });
 };
+
 function EditorsPick() {
   const navigate = useNavigate();
+  const [imageList, setImageList] = useState([]);
+  const [swiperEndNumber, setSwiperEndNumber] = useState(0);
 
   const { isLoading, isError, data: stores } = useQuery({ queryKey: ['stores'], queryFn: fetchStores });
+
+  const downloadURL = async (id) => {
+    try {
+      const listRef = ref(storage, id);
+      const res = await listAll(listRef);
+      // console.log('res:', res);
+      // console.log('Files:', res.items);
+      if (res.items.length > 0) {
+        const firstFileRef = res.items[0];
+        console.log('res-->', res);
+        const url = await getDownloadURL(firstFileRef);
+        return url;
+      } else {
+        return null;
+      }
+      return res.items;
+    } catch (error) {
+      console.error('Error getting files: ', error);
+      return null;
+    }
+  };
+
+  useEffect(() => {
+    const downloadAllUrls = async () => {
+      if (stores) {
+        try {
+          const downloadPromises = stores.map((store) => downloadURL(store.id));
+          const results = await Promise.all(downloadPromises);
+          console.log('image results-->', results);
+          setImageList(results.flat());
+        } catch (error) {
+          console.error('Error downloading images: ', error);
+        }
+      }
+    };
+    if (!isLoading && !isError) {
+      downloadAllUrls();
+      setSwiperEndNumber(Math.ceil(stores.length / 9));
+    }
+  }, [stores, isLoading, isError]);
 
   if (isLoading) {
     return <Container>Loading...</Container>;
   }
-  const swiperEndNumber = Math.ceil(stores.length / 9);
 
   return (
     <Container>
@@ -43,10 +90,17 @@ function EditorsPick() {
           return (
             <StyledSwiperSlide key={page}>
               <CardContainer>
-                {stores.slice(page * 9, (page + 1) * 9).map((item) => {
+                {stores.slice(page * 9, (page + 1) * 9).map((item, index) => {
                   return (
                     <SingleCard className="single-card" key={item.id} onClick={() => navigate(`/detail/${item.id}`)}>
-                      <img alt="store" />
+                      <img
+                        src={
+                          imageList.find((img, idx) => idx === index)
+                            ? imageList.find((img, idx) => idx === index)
+                            : BookstoreImg
+                        }
+                        alt="store"
+                      />
                       <TextContainer>
                         <h5>{item.name}</h5>
                         <p>{item.address}</p>
@@ -105,6 +159,7 @@ const SingleCard = styled.div`
 
   & img {
     height: 300px;
+    object-fit: fill;
     background-color: lightcoral;
   }
 `;
