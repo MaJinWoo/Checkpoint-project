@@ -1,18 +1,16 @@
-import styled from 'styled-components';
+import { Container as MapDiv, NaverMap, Marker, useNavermaps } from 'react-naver-maps';
 
-function EachStoreMap() {
-  return <MapContainer className="map-container">지도 요기</MapContainer>;
+function EachStoreMap({ latlng }) {
+  const navermaps = useNavermaps();
+  const { lat, lng } = latlng;
+
+  return (
+    <>
+      <NaverMap defaultCenter={new navermaps.LatLng(lat, lng)} defaultZoom={15}>
+        <Marker defaultPosition={new navermaps.LatLng(lat, lng)} />
+      </NaverMap>
+    </>
+  );
 }
 
 export default EachStoreMap;
-
-const MapContainer = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  width: 1100px;
-  height: 500px;
-  background-color: lightblue;
-  border-radius: 10px;
-`;

@@ -3,7 +3,7 @@ import axios from 'axios';
 export const fetchStores = async () => {
   try {
     const response = await axios.get(`${process.env.REACT_APP_STORE_SERVER_URL}/stores`);
-    console.log(response.data);
+    // console.log(response.data);
     return response.data;
   } catch (error) {
     console.error('Error fetching data:', error);

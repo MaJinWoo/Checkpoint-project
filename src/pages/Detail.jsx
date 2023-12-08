@@ -14,7 +14,7 @@ import { FaChair } from 'react-icons/fa';
 
 import CommentBox from '../components/CommentBox';
 import EachStoreMap from '../components/EachStoreMap';
-
+import { Container as MapDiv } from 'react-naver-maps';
 export default function Detail() {
   const params = useParams();
 
@@ -71,7 +71,17 @@ export default function Detail() {
           </LinkContainer>
         </StoreInfoContainer>
         <CommentBox />
-        <EachStoreMap />
+        <MapContainer className="map-container">
+          <MapDiv
+            style={{
+              width: '100%',
+              height: '100%'
+            }}
+          >
+            <EachStoreMap latlng={filteredStore.geocode} />
+          </MapDiv>
+        </MapContainer>
+
         <CRUDContainer>
           <button>수정하기</button>
           <button>삭제하기</button>
@@ -163,4 +173,15 @@ const LinkContainer = styled.div`
 
 const CRUDContainer = styled.div`
   display: flex;
+`;
+
+const MapContainer = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 1100px;
+  height: 500px;
+  background-color: lightblue;
+  border-radius: 10px;
 `;
