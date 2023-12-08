@@ -27,9 +27,9 @@ export const addStore = async (newStore) => {
   }
 };
 
-export const updateStore = async (payload) => {
+export const updateStore = async ({ id, changes }) => {
   try {
-    await axios.patch(`${process.env.REACT_APP_STORE_SERVER_URL}/stores`, payload);
+    await axios.patch(`${process.env.REACT_APP_STORE_SERVER_URL}/stores/${id}`, changes);
   } catch (error) {
     return console.error('Error updating store', error);
   }
