@@ -10,6 +10,11 @@
       "geocode": {
         "lat": "37.5573823",
         "lng": "126.9228798"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": true
       }
     },
     {
@@ -22,6 +27,11 @@
       "geocode": {
         "lat": "37.5572559",
         "lng": "126.9051913"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": true
       }
     },
     {
@@ -34,6 +44,11 @@
       "geocode": {
         "lat": "36.3255747",
         "lng": "127.4313947"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -46,6 +61,11 @@
       "geocode": {
         "lat": "37.5830589",
         "lng": "126.9865919"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -58,6 +78,11 @@
       "geocode": {
         "lat": "37.5517132",
         "lng": "126.9410634"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -70,6 +95,11 @@
       "geocode": {
         "lat": "37.7582154",
         "lng": "128.8972116"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -82,6 +112,11 @@
       "geocode": {
         "lat": "37.5443589",
         "lng": "126.9858387"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -94,6 +129,11 @@
       "geocode": {
         "lat": "37.5805484",
         "lng": "127.0056108"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -106,6 +146,11 @@
       "geocode": {
         "lat": "37.5576792",
         "lng": "126.9197850"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -118,6 +163,11 @@
       "geocode": {
         "lat": "37.4829739",
         "lng": "126.9543106"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -130,6 +180,11 @@
       "geocode": {
         "lat": "37.5388806",
         "lng": "127.0513112"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -142,6 +197,11 @@
       "geocode": {
         "lat": "37.5646140",
         "lng": "126.9891333"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -154,6 +214,11 @@
       "geocode": {
         "lat": "35.5765331",
         "lng": "129.3183654"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -166,6 +231,11 @@
       "geocode": {
         "lat": "35.8295663",
         "lng": "129.1882171"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -178,6 +248,11 @@
       "geocode": {
         "lat": "36.3270064",
         "lng": "127.4276793"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -190,6 +265,11 @@
       "geocode": {
         "lat": "37.5574072",
         "lng": "126.8129635"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -202,6 +282,11 @@
       "geocode": {
         "lat": "37.5556909",
         "lng": "126.9111223"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -214,6 +299,11 @@
       "geocode": {
         "lat": "37.5821327",
         "lng": "126.9695413"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -226,6 +316,11 @@
       "geocode": {
         "lat": "35.8736424",
         "lng": "128.5932544"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -238,6 +333,11 @@
       "geocode": {
         "lat": "35.1920849",
         "lng": "126.8301780"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -250,6 +350,11 @@
       "geocode": {
         "lat": "37.5488567",
         "lng": "126.9176916"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -262,6 +367,11 @@
       "geocode": {
         "lat": "33.2744231",
         "lng": "126.6568270"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -274,6 +384,11 @@
       "geocode": {
         "lat": "37.5523826",
         "lng": "126.9067885"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -286,6 +401,11 @@
       "geocode": {
         "lat": "33.5408300",
         "lng": "126.6733446"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -298,6 +418,11 @@
       "geocode": {
         "lat": "37.5662237",
         "lng": "126.9168589"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -310,6 +435,11 @@
       "geocode": {
         "lat": "37.5622852",
         "lng": "127.0680642"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -322,6 +452,11 @@
       "geocode": {
         "lat": "37.5766894",
         "lng": "127.0100147"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -334,6 +469,11 @@
       "geocode": {
         "lat": "37.5449181",
         "lng": "126.9869967"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -346,6 +486,11 @@
       "geocode": {
         "lat": "34.8263348",
         "lng": "128.4154122"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -358,6 +503,11 @@
       "geocode": {
         "lat": "37.5892644",
         "lng": "127.0215152"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -370,6 +520,11 @@
       "geocode": {
         "lat": "37.5053219",
         "lng": "126.7293563"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -382,6 +537,11 @@
       "geocode": {
         "lat": "37.5720320",
         "lng": "126.9743109"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -394,6 +554,11 @@
       "geocode": {
         "lat": "33.3886944",
         "lng": "126.2296269"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -406,6 +571,11 @@
       "geocode": {
         "lat": "37.5477864",
         "lng": "126.9390164"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -418,6 +588,11 @@
       "geocode": {
         "lat": "37.2844044",
         "lng": "127.0127105"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -430,6 +605,11 @@
       "geocode": {
         "lat": "37.5829904",
         "lng": "126.9874123"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -442,6 +622,11 @@
       "geocode": {
         "lat": "35.9829696",
         "lng": "128.6489647"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -454,6 +639,11 @@
       "geocode": {
         "lat": "37.5615808",
         "lng": "126.9060251"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -466,6 +656,11 @@
       "geocode": {
         "lat": "37.4804078",
         "lng": "126.9569923"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -478,6 +673,11 @@
       "geocode": {
         "lat": "37.5216942",
         "lng": "126.9003521"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -490,6 +690,11 @@
       "geocode": {
         "lat": "37.5661037",
         "lng": "126.9200702"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -502,6 +707,11 @@
       "geocode": {
         "lat": "37.5463801",
         "lng": "126.9462994"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -514,6 +724,11 @@
       "geocode": {
         "lat": "37.5787600",
         "lng": "126.9703363"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -526,6 +741,11 @@
       "geocode": {
         "lat": "37.5568132",
         "lng": "127.0135404"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -538,6 +758,11 @@
       "geocode": {
         "lat": "33.4903734",
         "lng": "126.9024078"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -550,6 +775,11 @@
       "geocode": {
         "lat": "35.1919242",
         "lng": "129.1030091"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -562,6 +792,11 @@
       "geocode": {
         "lat": "37.5447363",
         "lng": "126.9831234"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -574,6 +809,11 @@
       "geocode": {
         "lat": "34.9469738",
         "lng": "127.4980021"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -586,6 +826,11 @@
       "geocode": {
         "lat": "37.5824625",
         "lng": "127.0040379"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -598,6 +843,11 @@
       "geocode": {
         "lat": "37.5870623",
         "lng": "126.9831670"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -610,6 +860,11 @@
       "geocode": {
         "lat": "37.5077286",
         "lng": "126.7238702"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -622,6 +877,11 @@
       "geocode": {
         "lat": "37.5557175",
         "lng": "126.9298147"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -634,6 +894,11 @@
       "geocode": {
         "lat": "37.5699347",
         "lng": "126.9337287"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -646,6 +911,11 @@
       "geocode": {
         "lat": "37.2530618",
         "lng": "127.0794428"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -658,6 +928,11 @@
       "geocode": {
         "lat": "37.7165883",
         "lng": "126.7644018"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -670,6 +945,11 @@
       "geocode": {
         "lat": "37.5427409",
         "lng": "127.0164292"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -682,6 +962,11 @@
       "geocode": {
         "lat": "36.3617802",
         "lng": "127.3541237"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -694,6 +979,11 @@
       "geocode": {
         "lat": "37.5683993",
         "lng": "126.9303223"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -706,6 +996,11 @@
       "geocode": {
         "lat": "37.7711565",
         "lng": "128.9064626"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -718,6 +1013,11 @@
       "geocode": {
         "lat": "37.7237905",
         "lng": "126.3645518"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -730,6 +1030,11 @@
       "geocode": {
         "lat": "37.5873301",
         "lng": "127.0027830"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -742,6 +1047,11 @@
       "geocode": {
         "lat": "37.5536252",
         "lng": "126.9023297"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -754,6 +1064,11 @@
       "geocode": {
         "lat": "35.1042446",
         "lng": "129.0350669"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -766,6 +1081,11 @@
       "geocode": {
         "lat": "35.8714205",
         "lng": "128.5907310"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -778,6 +1098,11 @@
       "geocode": {
         "lat": "37.6522164",
         "lng": "127.0490676"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -790,6 +1115,11 @@
       "geocode": {
         "lat": "37.5587513",
         "lng": "126.9156462"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -802,6 +1132,11 @@
       "geocode": {
         "lat": "33.3326278",
         "lng": "126.2595644"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -814,6 +1149,11 @@
       "geocode": {
         "lat": "37.8822158",
         "lng": "127.7302636"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -826,6 +1166,11 @@
       "geocode": {
         "lat": "33.4461341",
         "lng": "126.8866129"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -838,6 +1183,11 @@
       "geocode": {
         "lat": "37.5551235",
         "lng": "126.9288986"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -850,6 +1200,11 @@
       "geocode": {
         "lat": "37.5629193",
         "lng": "126.9171937"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -862,6 +1217,11 @@
       "geocode": {
         "lat": "37.5952243",
         "lng": "126.9170043"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -874,6 +1234,11 @@
       "geocode": {
         "lat": "37.3238954",
         "lng": "126.9361266"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -886,6 +1251,11 @@
       "geocode": {
         "lat": "37.5554283",
         "lng": "126.9302123"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -898,6 +1268,11 @@
       "geocode": {
         "lat": "37.5554283",
         "lng": "126.9302123"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -910,6 +1285,11 @@
       "geocode": {
         "lat": "37.3490903",
         "lng": "127.9330422"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -922,6 +1302,11 @@
       "geocode": {
         "lat": "37.6061666",
         "lng": "127.0611260"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -934,6 +1319,11 @@
       "geocode": {
         "lat": "37.5060379",
         "lng": "127.0479158"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -946,6 +1336,11 @@
       "geocode": {
         "lat": "35.9344975",
         "lng": "128.5513827"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -958,6 +1353,11 @@
       "geocode": {
         "lat": "37.5263728",
         "lng": "127.0389257"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -970,6 +1370,11 @@
       "geocode": {
         "lat": "37.5843957",
         "lng": "126.9973508"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -982,6 +1387,11 @@
       "geocode": {
         "lat": "37.5795353",
         "lng": "126.9698039"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     },
     {
@@ -994,54 +1404,11 @@
       "geocode": {
         "lat": "37.7577153",
         "lng": "128.8891178"
-      }
-    },
-    {
-      "id": "ef8599e7-8ae3-4e3d-92ff-9fb2ac1cff52",
-      "name": "테스트 혜민 책방",
-      "address": "서울시 용산구 원효로 216 용산e편한세상 113동",
-      "instagram": "@page_hyeomin",
-      "homepage": "hyeomin.com",
-      "hashtag": null,
-      "geocode": {
-        "lat": null,
-        "lng": null
-      }
-    },
-    {
-      "id": "e308ed75-900c-446d-bd62-e1b4349f66fe",
-      "name": "테스트 책방 이미지",
-      "address": "서울시 용산구 원효로 216 용산e편한세상",
-      "instagram": "@page_hyeomin",
-      "homepage": "hyeomin.com",
-      "hashtag": null,
-      "geocode": {
-        "lat": null,
-        "lng": null
-      }
-    },
-    {
-      "id": "992b14d0-e396-4c99-9822-f5048129a5a9",
-      "name": "테스트책방 타일",
-      "address": "서울시 용산구 원효로 216 용산e편한세상",
-      "instagram": "@hyeomin",
-      "homepage": "hyeomin.com",
-      "hashtag": null,
-      "geocode": {
-        "lat": null,
-        "lng": null
-      }
-    },
-    {
-      "id": "66c77c62-8e4c-4398-8b35-ca0cc9d366d0",
-      "name": "테스트 빵빵빵",
-      "address": "서울시 용산구 원효로 216 용산e편한세상 113동",
-      "instagram": "@hyeomin",
-      "homepage": "hyeomin.com",
-      "hashtag": null,
-      "geocode": {
-        "lat": "37.5362392",
-        "lng": "126.9664929"
+      },
+      "checklist": {
+        "alcohol": false,
+        "coffee": false,
+        "seats": false
       }
     }
   ]

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import Background1 from '../assets/Background1.png';
 import Background3 from '../assets/Background3.png';
@@ -6,7 +6,23 @@ import EditorsPick from './EditorsPick';
 import theme from '../styles/theme';
 import MapTest from './MapTest';
 import { Container as MapDiv } from 'react-naver-maps';
+import { useQuery } from '@tanstack/react-query';
+import { fetchStores } from '../api/stores';
+
 function HomeBody({ listRef }) {
+  const { isLoading, isError, data: stores } = useQuery({ queryKey: ['stores'], queryFn: fetchStores });
+  const [storeOfTheDay, setStoreOfTheDay] = useState({});
+
+  useEffect(() => {
+    if (stores) {
+      const randomNum = Math.floor(Math.random() * stores.length);
+      console.log('random data-->', stores[randomNum]);
+      const storeOfTheDay = stores.find((item) => item.id === stores[randomNum].id);
+      console.log('당첨', storeOfTheDay);
+      setStoreOfTheDay(storeOfTheDay);
+    } else return;
+  }, [stores]);
+
   return (
     <Container>
       <FristBody className="of-the-day">
@@ -15,15 +31,21 @@ function HomeBody({ listRef }) {
         </LeftContainer>
         <RightContainer className="text-container">
           <h3>Bookstore of the day</h3>
-          <span>책방 이름</span>
-          <span>위치</span>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae molestie leo, id vehicula ante.
-            Proin vitae rhoncus lacus. Etiam dolor urna, dignissim nec neque a, fringilla rutrum quam. Nulla convallis
-            lectus nec ante finibus, nec convallis nisl faucibus. Mauris non risus aliquam, efficitur nibh eget, porta
-            nisl. Suspendisse sed nibh fringilla, varius risus nec, ullamcorper sapien.
-          </p>
-          <button>자세히 보기</button>
+          {storeOfTheDay ? (
+            <>
+              <span>{storeOfTheDay.name}</span>
+              <span>{storeOfTheDay.address}</span>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vitae molestie leo, id vehicula ante.
+                Proin vitae rhoncus lacus. Etiam dolor urna, dignissim nec neque a, fringilla rutrum quam. Nulla
+                convallis lectus nec ante finibus, nec convallis nisl faucibus. Mauris non risus aliquam, efficitur nibh
+                eget, porta nisl. Suspendisse sed nibh fringilla, varius risus nec, ullamcorper sapien.
+              </p>
+              <button>자세히 보기</button>
+            </>
+          ) : (
+            'Loading...'
+          )}
         </RightContainer>
       </FristBody>
       <EditorsPick />
@@ -114,6 +136,7 @@ const RightContainer = styled.div`
     color: ${theme.color.green};
     font-size: 14px;
     background-color: ${theme.color.main};
+    font-family: 'Gowoon-Regular';
 
     &:hover {
       cursor: pointer;
