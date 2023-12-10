@@ -105,7 +105,7 @@ function CommentBox({ storeId }) {
         commentId: commentId,
         storeId: storeId,
         userId: user.uid,
-        nickname: user.nickname,
+        nickname: user.displayName,
         content: commentContent
       };
 
@@ -149,7 +149,6 @@ function CommentBox({ storeId }) {
               setCommentContent('');
             }}
           >
-            <p></p>
             <TextArea>
               <textarea
                 value={commentContent}
