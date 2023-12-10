@@ -12,8 +12,8 @@
         "lng": "126.9228798"
       },
       "checklist": {
-        "alcohol": false,
-        "coffee": false,
+        "alcohol": true,
+        "coffee": true,
         "seats": true
       }
     },

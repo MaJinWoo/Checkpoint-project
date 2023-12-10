@@ -105,7 +105,7 @@ function CommentBox({ storeId }) {
         commentId: commentId,
         storeId: storeId,
         userId: user.uid,
-        nickname: user.displayName,
+        nickname: user.nickname,
         content: commentContent
       };
 
@@ -131,11 +131,10 @@ function CommentBox({ storeId }) {
       <label>방문 후기</label>
 
       <CommentInputContainer>
-        <label>방문 후기 남기기</label>
         <>
           {firedata.map((data) => (
             <div key={data.commentId}>
-              <p>유저닉네임</p>
+              <p>{data.nickname} :</p>
               <p>{data.content}</p>
               <button onClick={() => deleteComment(data.commentId)}>삭제</button>
             </div>
@@ -150,12 +149,12 @@ function CommentBox({ storeId }) {
               setCommentContent('');
             }}
           >
-            <p>닉네임</p>
+            <p></p>
             <TextArea>
               <textarea
                 value={commentContent}
                 onChange={(event) => setCommentContent(event.target.value)}
-                placeholder="해당 책방에 대한 후기를 남겨보세요"
+                placeholder="해당 책방에 대한 방문후기를 남겨보세요"
               />
               <button type="submit">추가</button>
             </TextArea>
@@ -170,6 +169,8 @@ export default CommentBox;
 
 const TextArea = styled.div`
   width: 107.4vh;
+
+  flex-direction: row;
 `;
 
 const CommentsContainer = styled.div`
