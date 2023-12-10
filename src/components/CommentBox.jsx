@@ -5,7 +5,7 @@ import { auth, db } from '../firebase';
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { collection, getDocs, addDoc, serverTimestamp, deleteDoc, doc } from 'firebase/firestore';
 
-function CommentBox() {
+function CommentBox({ storeId }) {
   const [firedata, setFireData] = useState([]);
   const [userName, setUserName] = useState('');
   const [commentContent, setCommentContent] = useState('');
@@ -42,22 +42,26 @@ function CommentBox() {
 
   //   fetchData();
   // }, []);
+  console.log(storeId);
   console.log(firedata);
   const fetchData = async () => {
     try {
       const querySnapshot = await getDocs(collection(db, 'comments'));
-      const firebaseData = querySnapshot.docs.map((doc) => {
-        const data = doc.data();
-        return {
-          id: doc.id,
-          nickname: data.nickname,
-          bookShopName: data.bookShopName,
-          createdAt: data.createdAt,
-          updatedAt: data.updatedAt,
-          content: data.content,
-          userId: data.userId
-        };
-      });
+      const firebaseData = querySnapshot.docs
+        .filter((doc) => doc.data().storeId === storeId) // Filter comments for the specific store
+        .map((doc) => {
+          const data = doc.data();
+          return {
+            id: storeId,
+            nickname: data.nickname,
+            bookShopName: data.bookShopName,
+            createdAt: data.createdAt,
+            updatedAt: data.updatedAt,
+            content: data.content,
+            userId: data.userId
+            // Add any other properties you need
+          };
+        });
 
       setFireData(firebaseData);
     } catch (error) {
@@ -97,6 +101,7 @@ function CommentBox() {
       }
 
       const newData = {
+        storeId: storeId,
         userId: user.uid,
         nickname: user.displayName,
         // bookShopName: bookShopName || '예시 서점',
