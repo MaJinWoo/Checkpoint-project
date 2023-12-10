@@ -4,6 +4,7 @@ import { useEffect, useState } from 'react';
 import { auth, db } from '../firebase';
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
 import { collection, getDocs, addDoc, serverTimestamp, deleteDoc, doc } from 'firebase/firestore';
+import { v4 as uuidv4 } from 'uuid';
 
 function CommentBox({ storeId }) {
   const [firedata, setFireData] = useState([]);
@@ -48,7 +49,7 @@ function CommentBox({ storeId }) {
     try {
       const querySnapshot = await getDocs(collection(db, 'comments'));
       const firebaseData = querySnapshot.docs
-        .filter((doc) => doc.data().storeId === storeId) // Filter comments for the specific store
+        .filter((doc) => doc.data().storeId === storeId)
         .map((doc) => {
           const data = doc.data();
           return {
@@ -59,7 +60,6 @@ function CommentBox({ storeId }) {
             updatedAt: data.updatedAt,
             content: data.content,
             userId: data.userId
-            // Add any other properties you need
           };
         });
 
@@ -72,12 +72,12 @@ function CommentBox({ storeId }) {
   const deleteComment = async (commentId) => {
     try {
       await deleteDoc(doc(db, 'comments', commentId));
-
-      setFireData((prevData) => prevData.filter((data) => data.id !== commentId));
+      setFireData((prevData) => prevData.filter((data) => data.commentId !== commentId));
     } catch (error) {
-      console.error('Error deleting comment:', error);
+      console.error('댓글 삭제 중 오류 발생:', error);
     }
   };
+
   const commentInputChange = (event) => {
     const {
       target: { name, value }
@@ -99,14 +99,16 @@ function CommentBox({ storeId }) {
       if (!user) {
         return;
       }
+      const commentId = uuidv4();
 
       const newData = {
+        commentId: commentId,
         storeId: storeId,
         userId: user.uid,
         nickname: user.displayName,
-        // bookShopName: bookShopName || '예시 서점',
         content: commentContent
       };
+
       // const docRef = await addDoc(collection(db, 'comments'), newData);
       await addDoc(collection(db, 'comments'), newData);
       fetchData();
@@ -132,12 +134,12 @@ function CommentBox({ storeId }) {
         <label>방문 후기 남기기</label>
         <>
           {firedata.map((data) => (
-            <div key={data.id}>
+            <div key={data.commentId}>
               <p>유저닉네임</p>
               <p>{data.content}</p>
               {/* <p>글작성시간: {data.createdAt.toDate().toLocaleString()}</p> */}
 
-              <button onClick={() => deleteComment(data.id)}>삭제</button>
+              <button onClick={() => deleteComment(data.commentId)}>삭제</button>
             </div>
           ))}
         </>
