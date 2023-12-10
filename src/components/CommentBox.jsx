@@ -3,7 +3,7 @@ import Background2 from '../assets/Background2.png';
 import { useEffect, useState } from 'react';
 import { auth, db } from '../firebase';
 import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
-import { collection, getDocs, addDoc, serverTimestamp, deleteDoc, doc } from 'firebase/firestore';
+import { collection, getDocs, addDoc, serverTimestamp, deleteDoc, doc, updateDoc } from 'firebase/firestore';
 import { v4 as uuidv4 } from 'uuid';
 
 function CommentBox({ storeId }) {
@@ -74,7 +74,7 @@ function CommentBox({ storeId }) {
       await deleteDoc(doc(db, 'comments', commentId));
       setFireData((prevData) => prevData.filter((data) => data.commentId !== commentId));
     } catch (error) {
-      console.error('댓글 삭제 중 오류 발생:', error);
+      console.error('댓글삭제 오류:', error);
     }
   };
 
@@ -137,8 +137,6 @@ function CommentBox({ storeId }) {
             <div key={data.commentId}>
               <p>유저닉네임</p>
               <p>{data.content}</p>
-              {/* <p>글작성시간: {data.createdAt.toDate().toLocaleString()}</p> */}
-
               <button onClick={() => deleteComment(data.commentId)}>삭제</button>
             </div>
           ))}
@@ -153,8 +151,14 @@ function CommentBox({ storeId }) {
             }}
           >
             <p>닉네임</p>
-            <textarea value={commentContent} onChange={(event) => setCommentContent(event.target.value)} />
-            <button type="submit">추가</button>
+            <TextArea>
+              <textarea
+                value={commentContent}
+                onChange={(event) => setCommentContent(event.target.value)}
+                placeholder="해당 책방에 대한 후기를 남겨보세요"
+              />
+              <button type="submit">추가</button>
+            </TextArea>
           </form>
         </div>
       </CommentInputContainer>
@@ -163,6 +167,10 @@ function CommentBox({ storeId }) {
 }
 
 export default CommentBox;
+
+const TextArea = styled.div`
+  width: 107.4vh;
+`;
 
 const CommentsContainer = styled.div`
   display: flex;
