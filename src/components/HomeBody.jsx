@@ -16,9 +16,7 @@ function HomeBody({ listRef }) {
   useEffect(() => {
     if (stores) {
       const randomNum = Math.floor(Math.random() * stores.length);
-      console.log('random data-->', stores[randomNum]);
       const storeOfTheDay = stores.find((item) => item.id === stores[randomNum].id);
-      console.log('당첨', storeOfTheDay);
       setStoreOfTheDay(storeOfTheDay);
     } else return;
   }, [stores]);

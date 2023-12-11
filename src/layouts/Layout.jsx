@@ -17,6 +17,8 @@ const LayoutContainer = styled.div`
   flex-direction: column;
   justify-content: center;
   align-items: center;
+
+  width: 100%;
 `;
 const Main = styled.div`
   display: flex;

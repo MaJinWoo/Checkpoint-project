@@ -31,6 +31,7 @@ export default function Detail() {
     try {
       const listRef = ref(storage, filteredStore.id);
       const res = await listAll(listRef);
+      console.log('res-->', res);
       if (res.items.length > 0) {
         const firstFileRef = res.items[0];
         const url = await getDownloadURL(firstFileRef);
@@ -89,11 +90,12 @@ const HeaderImgContainer = styled.div`
   justify-content: center;
 
   height: 400px;
+  width: 100%;
   overflow: hidden;
   border-radius: 10px;
 
   & img {
-    object-fit: contain;
+    object-fit: fill;
     width: 100%;
   }
 `;
