@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import Background3 from '../assets/Background3.png';
-import EditorsPick from '../components/Main/EditorsPick';
-import MapTest from './MapTest';
+import Background3 from '../../assets/Background3.png';
+import EditorsPick from './EditorsPick';
+import MapTest from '../MapTest';
 import { Container as MapDiv } from 'react-naver-maps';
-import FirstBody from './Main/FirstBody';
+import FirstBody from './FirstBody';
 
 function HomeBody({ listRef }) {
   return (
@@ -57,5 +57,4 @@ const NeighborStores = styled.div`
 
 const MapContainer = styled.div`
   height: 400px;
-  background-color: pink;
 `;

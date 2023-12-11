@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import HomeBody from '../components/HomeBody';
+import HomeBody from '../components/Main/HomeBody';
 import Layout from '../layouts/Layout';
 
 import HeaderImg from '../assets/nguyen-thu-hoai-9CILN1ybspA-unsplash.jpg';
-import { useEffect, useRef } from 'react';
+import { useRef } from 'react';
 import theme from '../styles/theme';
 import Background1 from '../assets/Background1.png';
 

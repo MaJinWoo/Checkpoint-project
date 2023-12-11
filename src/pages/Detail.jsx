@@ -6,14 +6,14 @@ import { useQuery } from '@tanstack/react-query';
 import { fetchStores } from '../api/stores';
 
 import Background1 from '../assets/Background1.png';
-import CommentBox from '../components/CommentBox';
+import CommentBox from '../components/Detail/CommentBox';
 import EachStoreMap from '../components/Detail/EachStoreMap';
 import { Container as MapDiv } from 'react-naver-maps';
-import StoreCRUD from '../components/StoreCRUD';
+import StoreCRUD from '../components/Detail/StoreCRUD';
 import { getDownloadURL, ref, listAll } from 'firebase/storage';
 import { storage } from '../firebase';
 import StoreInfo from '../components/Detail/StoreInfo';
-import { useEffect, useState } from 'react';
+import { useState } from 'react';
 
 export default function Detail() {
   const [url, setUrl] = useState('');

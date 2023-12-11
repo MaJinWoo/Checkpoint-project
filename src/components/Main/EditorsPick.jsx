@@ -1,19 +1,19 @@
-import styled from 'styled-components';
-import Background2 from '../../assets/Background2.png';
-import theme from '../../styles/theme';
-import { useNavigate, useParams } from 'react-router-dom';
-import { fetchStores } from '../../api/stores';
 import { useQuery } from '@tanstack/react-query';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
+import { getDownloadURL, listAll, ref } from 'firebase/storage';
+import { useEffect, useState } from 'react';
+import { useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
-import { listAll, ref, getStorage, getDownloadURL } from 'firebase/storage';
-import { storage } from '../../firebase';
-import { useEffect, useState } from 'react';
+import { A11y, Navigation, Pagination, Scrollbar } from 'swiper/modules';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { fetchStores } from '../../api/stores';
+import Background2 from '../../assets/Background2.png';
 import BookstoreImg from '../../assets/BookstoreImg.jpg';
+import { storage } from '../../firebase';
+import theme from '../../styles/theme';
 
 const range = (length) => {
   return [...Array(length)].map((_, i) => {
@@ -39,7 +39,6 @@ function EditorsPick() {
       } else {
         return null;
       }
-      return res.items;
     } catch (error) {
       console.error('Error getting files: ', error);
       return null;
