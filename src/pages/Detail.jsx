@@ -55,7 +55,7 @@ export default function Detail() {
           <img src={url ? url : BookstoreImg} />
         </HeaderImgContainer>
         <StoreInfo filteredStore={filteredStore} />
-        <CommentBox />
+        <CommentBox storeId={filteredStore.id} />
         <MapContainer className="map-container">
           <MapDiv
             style={{
