@@ -1,19 +1,19 @@
+import { useQuery } from '@tanstack/react-query';
+import { useParams } from 'react-router-dom';
 import styled from 'styled-components';
+import { fetchStores } from '../api/stores';
 import BookstoreImg from '../assets/BookstoreImg.jpg';
 import Layout from '../layouts/Layout';
-import { useParams } from 'react-router-dom';
-import { useQuery } from '@tanstack/react-query';
-import { fetchStores } from '../api/stores';
 
+import { getDownloadURL, listAll, ref } from 'firebase/storage';
+import { useState } from 'react';
+import { Container as MapDiv } from 'react-naver-maps';
 import Background1 from '../assets/Background1.png';
 import CommentBox from '../components/Detail/CommentBox';
 import EachStoreMap from '../components/Detail/EachStoreMap';
-import { Container as MapDiv } from 'react-naver-maps';
 import StoreCRUD from '../components/Detail/StoreCRUD';
-import { getDownloadURL, ref, listAll } from 'firebase/storage';
-import { storage } from '../firebase';
 import StoreInfo from '../components/Detail/StoreInfo';
-import { useState } from 'react';
+import { storage } from '../firebase';
 
 export default function Detail() {
   const [url, setUrl] = useState('');
@@ -31,7 +31,6 @@ export default function Detail() {
     try {
       const listRef = ref(storage, filteredStore.id);
       const res = await listAll(listRef);
-      console.log('res-->', res);
       if (res.items.length > 0) {
         const firstFileRef = res.items[0];
         const url = await getDownloadURL(firstFileRef);
