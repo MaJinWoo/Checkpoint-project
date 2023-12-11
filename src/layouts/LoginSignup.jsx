@@ -8,6 +8,7 @@ import { signOut } from 'firebase/auth';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeLoginStatus, changeMemberStatus } from '../redux/modules/authSlice';
 import { Link } from 'react-router-dom';
+import swal from 'sweetalert';
 
 export default function LoginSignup() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -21,21 +22,26 @@ export default function LoginSignup() {
 
   const logoutHandler = async () => {
     await signOut(auth);
-    alert('로그아웃 되었습니다.');
+
+    swal('로그아웃', '로그아웃 되었습니다.', 'success');
+
     dispatch(changeLoginStatus(false));
     console.log(authState.isLogin);
   };
 
   return (
-    <Container>
-      <div>
-        <StyledLink to={'/'}>Home</StyledLink>
-      </div>
-      {authState.isLogin === true ? (
-        <button onClick={logoutHandler}>로그아웃</button>
-      ) : (
-        <button onClick={modalHandler}>로그인</button>
-      )}
+    <>
+      <Container>
+        <div>
+          <StyledLink to={'/'}>Home</StyledLink>
+        </div>
+        {authState.isLogin === true ? (
+          <button onClick={logoutHandler}>로그아웃</button>
+        ) : (
+          <button onClick={modalHandler}>로그인</button>
+        )}
+      </Container>
+
       {modalOpen ? (
         <ModalWrapper>
           <ModalBody>
@@ -44,7 +50,7 @@ export default function LoginSignup() {
           </ModalBody>
         </ModalWrapper>
       ) : null}
-    </Container>
+    </>
   );
 }
 const Container = styled.div`
@@ -115,6 +121,7 @@ const ModalBody = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   position: relative;
 `;
 
