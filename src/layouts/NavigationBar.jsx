@@ -1,9 +1,10 @@
-import { useEffect, useState } from 'react';
-import { auth } from '../firebase';
 import { onAuthStateChanged } from 'firebase/auth';
-import LoginSignup from './LoginSignup';
+import { useEffect, useState } from 'react';
 import { useDispatch } from 'react-redux';
+import { auth } from '../firebase';
 import { changeLoginStatus } from '../redux/modules/authSlice';
+import LoginSignup from './LoginSignup';
+
 export default function NavigationBar() {
   // 로딩 중 구현
   const [isLoading, setIsLoading] = useState(false);

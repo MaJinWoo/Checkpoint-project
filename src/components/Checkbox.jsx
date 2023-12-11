@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 
-function Checkbox({ checklist, setChecklist }) {
+function Checkbox({ setChecklist }) {
   const [alcohol, setAlcohol] = useState(false);
   const [coffee, setCoffee] = useState(false);
   const [seats, setSeats] = useState(false);
