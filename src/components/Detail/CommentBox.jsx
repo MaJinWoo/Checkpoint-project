@@ -1,10 +1,10 @@
-import styled from 'styled-components';
-import Background2 from '../../assets/Background2.png';
-import { useEffect, useState } from 'react';
-import { auth, db } from '../../firebase';
 import { onAuthStateChanged } from 'firebase/auth';
-import { collection, getDocs, addDoc, deleteDoc, doc } from 'firebase/firestore';
+import { addDoc, collection, deleteDoc, doc, getDocs } from 'firebase/firestore';
+import { useEffect, useState } from 'react';
+import styled from 'styled-components';
 import { v4 as uuidv4 } from 'uuid';
+import Background2 from '../../assets/Background2.png';
+import { auth, db } from '../../firebase';
 
 function CommentBox({ storeId }) {
   const [firedata, setFireData] = useState([]);
@@ -18,33 +18,6 @@ function CommentBox({ storeId }) {
     });
   }, []);
 
-  // useEffect(() => {
-  //   const fetchData = async () => {
-  //     try {
-  //       const querySnapshot = await getDocs(collection(db, 'comments'));
-  //       const firebaseData = querySnapshot.docs.map((doc) => {
-  //         const data = doc.data();
-  //         return {
-  //           id: doc.id,
-  //           nickname: data.nickname,
-  //           bookShopName: data.bookShopName,
-  //           createdAt: data.createdAt,
-  //           updatedAt: data.updatedAt,
-  //           content: data.content,
-  //           userId: data.userId
-  //         };
-  //       });
-
-  //       setFireData(firebaseData);
-  //     } catch (error) {
-  //       console.error('Error fetching data:', error);
-  //     }
-  //   };
-
-  //   fetchData();
-  // }, []);
-  // console.log(storeId);
-  // console.log(firedata);
   const fetchData = async () => {
     try {
       const querySnapshot = await getDocs(collection(db, 'comments'));

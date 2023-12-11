@@ -1,10 +1,11 @@
 import { createUserWithEmailAndPassword, updateProfile } from 'firebase/auth';
 import { useState } from 'react';
-import { auth } from '../firebase';
+import { useDispatch } from 'react-redux';
 import styled from 'styled-components';
-import { useSelector, useDispatch } from 'react-redux';
-import { changeMemberStatus } from '../redux/modules/authSlice';
 import swal from 'sweetalert';
+import { auth } from '../firebase';
+import { changeMemberStatus } from '../redux/modules/authSlice';
+
 export default function Signup() {
   const [signupEmail, setSignupEmail] = useState('');
   const [signupPassword, setSignupPassword] = useState('');

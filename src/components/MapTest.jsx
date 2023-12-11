@@ -1,9 +1,9 @@
 import { useQuery } from '@tanstack/react-query';
 import { useEffect, useState } from 'react';
-import styled from 'styled-components';
-import { Container as MapDiv, NaverMap, useNavermaps, Overlay, Listener, InfoWindow } from 'react-naver-maps';
-import { fetchStores } from '../api/stores';
+import { Listener, NaverMap, Overlay, useNavermaps } from 'react-naver-maps';
 import { useDispatch, useSelector } from 'react-redux';
+import styled from 'styled-components';
+import { fetchStores } from '../api/stores';
 import { setLatLng } from '../redux/modules/mapSlice';
 
 export default function MapTest({ listRef, lat, lng }) {
@@ -21,24 +21,7 @@ export default function MapTest({ listRef, lat, lng }) {
   // db.json api get 가져오기 => {data}
   const { isLoading, isFetching, isError, data } = useQuery({ queryKey: ['stores'], queryFn: fetchStores });
   // db.json 데이터를 순회하면서 {data.map}, address 정보를 입력받으면 위도, 경도로 반환해주는 함수
-  // 반환받은 경도, 위도를 갖고 marker 맵에 생성 => {data.mpa(()=>{return <Overlay.../>})}
-  // Address To Geocode
-  // navermaps.Service.geocode(
-  //   {
-  //     address: '강원도 강릉시 강릉대로159번안길 12 1층, 서점 한낮의 바다'
-  //   },
-  //   function async(status, response) {
-  //     if (status !== navermaps.Service.Status.OK) {
-  //       console.log('error');
-  //       return alert('Something wrong!');
-  //     }
-  //     const result = response.result;
-  //     const items = result.items;
-  //     const geocode = { lat: items[0].point.y, lng: items[0].point.x };
-  //   }
-  // );
 
-  // 사용자 위치정보 불러오기
   useEffect(() => {
     setIsMapLoading(true);
     if (navigator.geolocation) {

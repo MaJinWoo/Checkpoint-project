@@ -1,13 +1,13 @@
-import React, { useEffect, useState } from 'react';
-import { v4 as uuidv4 } from 'uuid';
-import styled from 'styled-components';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { useLocation, useNavigate } from 'react-router-dom';
-import { addStore, updateStore } from '../api/stores';
+import { ref, uploadBytes } from 'firebase/storage';
+import React, { useEffect, useState } from 'react';
 import { useNavermaps } from 'react-naver-maps';
-import { storage } from '../firebase';
-import { uploadBytes, ref } from 'firebase/storage';
+import { useLocation, useNavigate } from 'react-router-dom';
+import styled from 'styled-components';
+import { v4 as uuidv4 } from 'uuid';
+import { addStore, updateStore } from '../api/stores';
 import Checkbox from '../components/Checkbox';
+import { storage } from '../firebase';
 
 function Admin() {
   const [storeId, setStoreId] = useState('');
@@ -156,7 +156,7 @@ function Admin() {
       <input type="text" value={address} onChange={(e) => setAddress(e.target.value)} placeholder="책방 주소" />
       <input type="text" value={instagram} onChange={(e) => setInstagram(e.target.value)} placeholder="인스타그램" />
       <input type="text" value={homepage} onChange={(e) => setHomepage(e.target.value)} placeholder="홈페이지" />
-      <Checkbox checklist={checklist} setChecklist={setChecklist} />
+      <Checkbox setChecklist={setChecklist} />
       <ImgUploadContainer>
         <input type="file" onChange={(e) => setChoosedImg(e.target.files[0])} placeholder="파일 업로드" />
         <button onClick={onHandleImgUpload}>업로드</button>
