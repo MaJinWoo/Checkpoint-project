@@ -4,7 +4,7 @@ import { auth } from '../firebase';
 import styled from 'styled-components';
 import { useSelector, useDispatch } from 'react-redux';
 import { changeMemberStatus } from '../redux/modules/authSlice';
-
+import swal from 'sweetalert';
 export default function Signup() {
   const [signupEmail, setSignupEmail] = useState('');
   const [signupPassword, setSignupPassword] = useState('');
@@ -15,23 +15,24 @@ export default function Signup() {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, signupEmail, signupPassword);
       await updateProfile(auth.currentUser, { displayName: signupNickname });
-      alert('회원가입이 완료되었습니다! 로그인 해주세요.');
+
+      swal('Good Job!', '회원가입이 완료되었습니다!', 'success');
+
       dispatch(changeMemberStatus(true));
       setSignupEmail('');
       setSignupPassword('');
     } catch (error) {
       const errorCode = error.code;
       if (errorCode === 'auth/email-already-in-use') {
-        alert('이미 사용중인 이메일입니다.');
+        swal('Oops...', '이미 사용중인 이메일입니다!', 'error');
       } else if (errorCode === 'auth/missing-password') {
-        alert('비밀번호를 입력해주세요.');
+        swal('Oops...', '비밀번호를 입력해주세요!', 'error');
       } else if (errorCode === 'auth/invalid-email') {
-        alert('이메일을 확인해주세요.');
+        swal('Oops...', '이메일을 확인해주세요!', 'error');
       } else if (errorCode === 'auth/weak-password') {
-        alert('비밀번호는 6자 이상이어야 합니다.');
+        swal('Oops...', '비밀번호는 6자 이상이어야 합니다!', 'error');
       }
       console.log('error with signup', errorCode);
-      // alert('회원가입 중 오류가 발생하였습니다.');
     }
   };
   return (

@@ -1,21 +1,7 @@
 import styled from 'styled-components';
 import Background2 from '../assets/Background2.png';
-
 function CommentBox() {
-  return (
-    <CommentsContainer>
-      <label>방문 후기</label>
-      <div>방문 후기 1</div>
-      <div>방문 후기 2</div>
-      <CommentInputContainer>
-        <label>방문 후기 남기기</label>
-        <div>
-          <textarea />
-          <button>확인</button>
-        </div>
-      </CommentInputContainer>
-    </CommentsContainer>
-  );
+  return <CommentsContainer></CommentsContainer>;
 }
 
 export default CommentBox;
