@@ -5,13 +5,13 @@ import styled from 'styled-components';
 import theme from '../../styles/theme';
 import { ref, listAll, getDownloadURL } from 'firebase/storage';
 import { storage } from '../../firebase';
-import { useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import BookstoreImg from '../../assets/BookstoreImg.jpg';
 
 function FirstBody() {
   const { isLoading, isError, data: stores } = useQuery({ queryKey: ['stores'], queryFn: fetchStores });
   const [storeOfTheDay, setStoreOfTheDay] = useState({});
-  const [imageToken, setImageToken] = useState('');
+  const navigate = useNavigate();
 
   useEffect(() => {
     if (stores) {
@@ -34,7 +34,6 @@ function FirstBody() {
       } else {
         return null;
       }
-      return res.items;
     } catch (error) {
       console.error('Error getting files: ', error);
       return null;
@@ -91,7 +90,7 @@ function FirstBody() {
               독립서점답게 활발한 소통을 이어가고 있다. 인스타그램을 통해 ‘누군가의 책’을 매일 소개하고 있으니 참고하기
               좋다.
             </p>
-            <button>자세히 보기</button>
+            <button onClick={() => navigate(`detail/${storeOfTheDay.id}`)}>자세히 보기</button>
           </>
         ) : (
           'Loading...'
