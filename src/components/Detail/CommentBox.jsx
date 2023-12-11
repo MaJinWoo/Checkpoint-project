@@ -1,9 +1,9 @@
 import styled from 'styled-components';
-import Background2 from '../assets/Background2.png';
+import Background2 from '../../assets/Background2.png';
 import { useEffect, useState } from 'react';
-import { auth, db } from '../firebase';
-import { createUserWithEmailAndPassword, onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
-import { collection, getDocs, addDoc, serverTimestamp, deleteDoc, doc, updateDoc } from 'firebase/firestore';
+import { auth, db } from '../../firebase';
+import { onAuthStateChanged } from 'firebase/auth';
+import { collection, getDocs, addDoc, deleteDoc, doc } from 'firebase/firestore';
 import { v4 as uuidv4 } from 'uuid';
 
 function CommentBox({ storeId }) {
