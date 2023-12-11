@@ -43,8 +43,8 @@ function CommentBox({ storeId }) {
 
   //   fetchData();
   // }, []);
-  console.log(storeId);
-  console.log(firedata);
+  // console.log(storeId);
+  // console.log(firedata);
   const fetchData = async () => {
     try {
       const querySnapshot = await getDocs(collection(db, 'comments'));
@@ -53,7 +53,7 @@ function CommentBox({ storeId }) {
         .map((doc) => {
           const data = doc.data();
           return {
-            id: storeId,
+            commentId: data.commentId,
             nickname: data.nickname,
             bookShopName: data.bookShopName,
             createdAt: data.createdAt,
@@ -71,8 +71,11 @@ function CommentBox({ storeId }) {
 
   const deleteComment = async (commentId) => {
     try {
+      console.log(db);
       await deleteDoc(doc(db, 'comments', commentId));
       setFireData((prevData) => prevData.filter((data) => data.commentId !== commentId));
+
+      // fetchData();
     } catch (error) {
       console.error('댓글삭제 오류:', error);
     }
