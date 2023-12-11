@@ -5,6 +5,7 @@ import Glogo from '../assets/g-logo.png';
 import styled from 'styled-components';
 import { useDispatch } from 'react-redux';
 import { changeLoginStatus, changeMemberStatus } from '../redux/modules/authSlice';
+import swal from 'sweetalert';
 
 export default function Login({ setModalOpen }) {
   const [loginEmail, setLoginEmail] = useState('');
@@ -16,19 +17,25 @@ export default function Login({ setModalOpen }) {
       const userCredential = await signInWithEmailAndPassword(auth, loginEmail, loginPassword);
       setLoginEmail('');
       setLoginPassword('');
+
+      swal('로그인 완료 📖', '어서오세요!', 'success');
+
       dispatch(changeLoginStatus(true));
       setModalOpen(false);
     } catch (error) {
       const errorCode = error.code;
       const errorMessage = error.message;
       console.log('error with LogIn', errorCode, errorMessage);
-      alert('등록되지 않은 회원이거나 유효하지 않은 이메일입니다.');
+
+      swal('Oops...', '등록되지 않은 회원이거나 유효하지 않은 이메일입니다.', 'error');
     }
   };
   const googleLoginHandler = async () => {
     const provider = new GoogleAuthProvider();
     try {
       const result = await signInWithPopup(auth, provider);
+
+      swal('로그인 완료 📖', '어서오세요!', 'success');
 
       setModalOpen(false);
       dispatch(changeLoginStatus(true));
