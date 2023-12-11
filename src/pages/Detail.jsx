@@ -7,7 +7,7 @@ import { fetchStores } from '../api/stores';
 
 import Background1 from '../assets/Background1.png';
 import CommentBox from '../components/CommentBox';
-import EachStoreMap from '../components/EachStoreMap';
+import EachStoreMap from '../components/Detail/EachStoreMap';
 import { Container as MapDiv } from 'react-naver-maps';
 import StoreCRUD from '../components/StoreCRUD';
 import { getDownloadURL, ref, listAll } from 'firebase/storage';

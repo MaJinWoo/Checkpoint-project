@@ -1,8 +1,8 @@
 import styled from 'styled-components';
-import Background2 from '../assets/Background2.png';
-import theme from '../styles/theme';
+import Background2 from '../../assets/Background2.png';
+import theme from '../../styles/theme';
 import { useNavigate, useParams } from 'react-router-dom';
-import { fetchStores } from '../api/stores';
+import { fetchStores } from '../../api/stores';
 import { useQuery } from '@tanstack/react-query';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination, Scrollbar, A11y } from 'swiper/modules';
@@ -11,9 +11,9 @@ import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import { listAll, ref, getStorage, getDownloadURL } from 'firebase/storage';
-import { storage } from '../firebase';
+import { storage } from '../../firebase';
 import { useEffect, useState } from 'react';
-import BookstoreImg from '../assets/BookstoreImg.jpg';
+import BookstoreImg from '../../assets/BookstoreImg.jpg';
 
 const range = (length) => {
   return [...Array(length)].map((_, i) => {
@@ -32,11 +32,8 @@ function EditorsPick() {
     try {
       const listRef = ref(storage, id);
       const res = await listAll(listRef);
-      // console.log('res:', res);
-      // console.log('Files:', res.items);
       if (res.items.length > 0) {
         const firstFileRef = res.items[0];
-        console.log('res-->', res);
         const url = await getDownloadURL(firstFileRef);
         return url;
       } else {
@@ -55,7 +52,6 @@ function EditorsPick() {
         try {
           const downloadPromises = stores.map((store) => downloadURL(store.id));
           const results = await Promise.all(downloadPromises);
-          console.log('image results-->', results);
           setImageList(results.flat());
         } catch (error) {
           console.error('Error downloading images: ', error);
