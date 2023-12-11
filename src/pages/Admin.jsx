@@ -8,7 +8,6 @@ import { useNavermaps } from 'react-naver-maps';
 import { storage } from '../firebase';
 import { uploadBytes, ref } from 'firebase/storage';
 import Checkbox from '../components/Checkbox';
-import UpdateStore from '../components/Admin/UpdateStore';
 
 function Admin() {
   const [storeId, setStoreId] = useState('');
@@ -149,7 +148,6 @@ function Admin() {
 
   return (
     <Container>
-      <UpdateStore />
       {filteredStore ? (
         <h2>{filteredStore.name}</h2>
       ) : (
