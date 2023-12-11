@@ -59,7 +59,8 @@ function CommentBox({ storeId }) {
             createdAt: data.createdAt,
             updatedAt: data.updatedAt,
             content: data.content,
-            userId: data.userId
+            userId: data.userId,
+            docId: doc.id //문서 이름
           };
         });
 
@@ -69,10 +70,10 @@ function CommentBox({ storeId }) {
     }
   };
 
-  const deleteComment = async (commentId) => {
+  const deleteComment = async (docId, commentId) => {
     try {
-      console.log(db);
-      await deleteDoc(doc(db, 'comments', commentId));
+      // console.log(db);
+      await deleteDoc(doc(db, 'comments', docId));
       setFireData((prevData) => prevData.filter((data) => data.commentId !== commentId));
 
       // fetchData();
@@ -139,7 +140,7 @@ function CommentBox({ storeId }) {
             <div key={data.commentId}>
               <p>{data.nickname} :</p>
               <p>{data.content}</p>
-              <button onClick={() => deleteComment(data.commentId)}>삭제</button>
+              <button onClick={() => deleteComment(data.docId, data.commentId)}>삭제</button>
             </div>
           ))}
         </>
